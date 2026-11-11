@@ -44,30 +44,8 @@ export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('ALL');
   const [searchQuery, setSearchQuery] = useState('');
-  const [activeSectionId, setActiveSectionId] = useState('hero');
 
   useEffect(() => {
-    // 1. Intersection Observer for floating cyber nav dock
-    const sectionIds = ['hero', 'all-events', 'highlights', 'venue', 'schedule', 'sponsors'];
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSectionId(entry.target.id);
-          }
-        });
-      },
-      {
-        rootMargin: '-20% 0px -40% 0px',
-        threshold: 0.1,
-      }
-    );
-
-    sectionIds.forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    });
-
     const scrollToEvents = () => {
       const stage = document.getElementById('events-stage') || document.getElementById('all-events');
       if (stage) {
@@ -101,14 +79,21 @@ export default function Home() {
       }
     }
 
-    // Passive, fluid on-scroll guide: smoothly lands at each key section
-    // (Hero <-> All Events <-> Highlights <-> Venue <-> Schedule <-> Sponsors <-> Footer)
+    // Passive, fluid on-scroll guide for desktop: smoothly lands at each key section
+    // Allows full scrolling inside taller sections (like Venue Basecamp + Map) before advancing
     let lastScrollY = window.scrollY;
     let isAutoScrolling = false;
     let autoScrollTimer = null;
 
+    const getBottomScroll = (el, topY) => {
+      if (!el) return topY;
+      return Math.max(topY, el.offsetTop + el.offsetHeight - window.innerHeight);
+    };
+
     const onScroll = () => {
-      // Don't auto-scroll if user is interacting with the map
+      // Disable JS section glide on coarse touch screens so mobile touch momentum stays 100% buttery
+      if (window.matchMedia('(pointer: coarse)').matches) return;
+      // Don't auto-scroll if user is hovering or interacting with the map
       if (window.__isMapHovered) return;
       if (isAutoScrolling) return;
 
@@ -125,10 +110,20 @@ export default function Home() {
       if (!allEventsSection || !highlights) return;
 
       const eventsY = Math.max(0, allEventsSection.offsetTop - navbarHeight);
+      const eventsBottomY = getBottomScroll(allEventsSection, eventsY);
+
       const highlightsY = Math.max(0, highlights.offsetTop - navbarHeight);
+      const highlightsBottomY = getBottomScroll(highlights, highlightsY);
+
       const venueY = venue ? Math.max(0, venue.offsetTop - navbarHeight) : null;
+      const venueBottomY = venue ? getBottomScroll(venue, venueY) : null;
+
       const scheduleY = schedule ? Math.max(0, schedule.offsetTop - navbarHeight) : null;
+      const scheduleBottomY = schedule ? getBottomScroll(schedule, scheduleY) : null;
+
       const sponsorsY = sponsors ? Math.max(0, sponsors.offsetTop - navbarHeight) : null;
+      const sponsorsBottomY = sponsors ? getBottomScroll(sponsors, sponsorsY) : null;
+
       const maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
 
       const triggerGlide = (targetY) => {
@@ -158,54 +153,54 @@ export default function Home() {
         triggerGlide(0);
         return;
       }
-      // 3. Events -> Highlights (Down)
-      if (isDown && highlightsY && scrollY > eventsY + 30 && scrollY < highlightsY - 80) {
+      // 3. Events -> Highlights (Down, only after reaching bottom of Events)
+      if (isDown && highlightsY && scrollY > eventsBottomY + 30 && scrollY < highlightsY - 80) {
         triggerGlide(highlightsY);
         return;
       }
       // 4. Highlights -> Events (Up)
-      if (!isDown && highlightsY && scrollY < highlightsY - 20 && scrollY > eventsY && scrollY < highlightsY) {
-        triggerGlide(eventsY);
+      if (!isDown && highlightsY && scrollY < highlightsY - 20 && scrollY > eventsBottomY && scrollY < highlightsY) {
+        triggerGlide(eventsBottomY);
         return;
       }
-      // 5. Highlights -> Venue (Down)
-      if (isDown && venueY && scrollY > highlightsY + 25 && scrollY < venueY - 80) {
+      // 5. Highlights -> Venue (Down, only after reaching bottom of Highlights)
+      if (isDown && venueY && scrollY > highlightsBottomY + 25 && scrollY < venueY - 80) {
         triggerGlide(venueY);
         return;
       }
       // 6. Venue -> Highlights (Up)
-      if (!isDown && venueY && scrollY < venueY - 25 && scrollY > highlightsY && scrollY < venueY) {
-        triggerGlide(highlightsY);
+      if (!isDown && venueY && scrollY < venueY - 25 && scrollY > highlightsBottomY && scrollY < venueY) {
+        triggerGlide(highlightsBottomY);
         return;
       }
-      // 7. Venue -> Schedule (Down)
-      if (isDown && scheduleY && scrollY > venueY + 25 && scrollY < scheduleY - 80) {
+      // 7. Venue -> Schedule (Down, ONLY after scrolling past the Venue Basecamp + Map section)
+      if (isDown && scheduleY && scrollY > venueBottomY + 40 && scrollY < scheduleY - 80) {
         triggerGlide(scheduleY);
         return;
       }
       // 8. Schedule -> Venue (Up)
-      if (!isDown && scheduleY && scrollY < scheduleY - 25 && scrollY > venueY && scrollY < scheduleY) {
-        triggerGlide(venueY);
+      if (!isDown && scheduleY && scrollY < scheduleY - 25 && scrollY > venueBottomY && scrollY < scheduleY) {
+        triggerGlide(venueBottomY);
         return;
       }
-      // 9. Schedule -> Sponsors (Down)
-      if (isDown && sponsorsY && scrollY > scheduleY + 25 && scrollY < sponsorsY - 80) {
+      // 9. Schedule -> Sponsors (Down, only after reaching bottom of Schedule)
+      if (isDown && sponsorsY && scrollY > scheduleBottomY + 25 && scrollY < sponsorsY - 80) {
         triggerGlide(sponsorsY);
         return;
       }
       // 10. Sponsors -> Schedule (Up)
-      if (!isDown && sponsorsY && scrollY < sponsorsY - 25 && scrollY > scheduleY && scrollY < sponsorsY) {
-        triggerGlide(scheduleY);
+      if (!isDown && sponsorsY && scrollY < sponsorsY - 25 && scrollY > scheduleBottomY && scrollY < sponsorsY) {
+        triggerGlide(scheduleBottomY);
         return;
       }
       // 11. Sponsors -> Footer (Down)
-      if (isDown && sponsorsY && scrollY > sponsorsY + 25 && scrollY < maxScroll - 60) {
+      if (isDown && sponsorsY && scrollY > sponsorsBottomY + 25 && scrollY < maxScroll - 60) {
         triggerGlide(maxScroll);
         return;
       }
       // 12. Footer -> Sponsors (Up)
-      if (!isDown && sponsorsY && scrollY < maxScroll - 30 && scrollY > sponsorsY + 60) {
-        triggerGlide(sponsorsY);
+      if (!isDown && sponsorsY && scrollY < maxScroll - 30 && scrollY > sponsorsBottomY + 60) {
+        triggerGlide(sponsorsBottomY);
         return;
       }
     };
@@ -213,7 +208,6 @@ export default function Home() {
     window.addEventListener('scroll', onScroll, { passive: true });
 
     return () => {
-      observer.disconnect();
       window.removeEventListener('open-all-events', handleScrollToEvents);
       window.removeEventListener('scroll', onScroll);
       clearTimeout(autoScrollTimer);
@@ -812,54 +806,6 @@ export default function Home() {
       {/* 5. SYNERGY-STYLE FEATURED SPONSORS & HOSTS SHOWCASE                      */}
       {/* ========================================================================= */}
       <SponsorsSynergyShowcase />
-
-      {/* ========================================================================= */}
-      {/* FLOATING CYBER SECTION NAVIGATION DOCK (DESKTOP ONLY)                     */}
-      {/* ========================================================================= */}
-      <aside
-        aria-label="Section Navigation"
-        className="fixed right-4 top-1/2 -translate-y-1/2 z-40 hidden lg:flex flex-col items-center gap-2.5 p-2 rounded-full bg-black/70 backdrop-blur-md border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.85)]"
-      >
-        {[
-          { id: 'hero', label: 'HERO' },
-          { id: 'all-events', label: 'EVENTS' },
-          { id: 'highlights', label: 'PERKS' },
-          { id: 'venue', label: 'VENUE' },
-          { id: 'schedule', label: 'SCHEDULE' },
-          { id: 'sponsors', label: 'SPONSORS' },
-        ].map((sec) => {
-          const isActive = activeSectionId === sec.id;
-          return (
-            <button
-              key={sec.id}
-              type="button"
-              onClick={() => {
-                sounds.click();
-                const el = document.getElementById(sec.id);
-                if (el) {
-                  const navbarHeight = 64;
-                  const rect = el.getBoundingClientRect();
-                  const targetY = rect.top + window.scrollY - navbarHeight;
-                  window.scrollTo({ top: Math.max(0, targetY), behavior: 'smooth' });
-                }
-              }}
-              title={sec.label}
-              className="group relative flex items-center justify-center w-6 h-6 rounded-full transition-all cursor-pointer"
-            >
-              <span className="absolute right-8 px-2 py-0.5 rounded bg-black/90 border border-white/20 text-[#73ba25] font-mono text-[9px] uppercase tracking-wider whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-lg">
-                {sec.label}
-              </span>
-              <span
-                className={`transition-all duration-300 rounded-full ${
-                  isActive
-                    ? 'w-2.5 h-6 bg-[#73ba25] shadow-[0_0_12px_#73ba25]'
-                    : 'w-2 h-2 bg-white/25 group-hover:bg-white/60 group-hover:scale-125'
-                }`}
-              />
-            </button>
-          );
-        })}
-      </aside>
 
       {/* ========================================================================= */}
       {/* EVENT DETAILS POPUP MODAL (TRIGGERED FROM 3D STREAM / CARDS)              */}
