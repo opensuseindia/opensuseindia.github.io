@@ -179,9 +179,9 @@ export default function SynergyHero() {
           onClick={() => sounds.click()}
         >
           {/* Primary Logo Title */}
-          <div className="flex items-center justify-center gap-2 sm:gap-3">
+          <div className="flex items-center justify-center gap-1.5 sm:gap-3">
             <span
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-pixel font-bold text-white tracking-normal select-none"
+              className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-pixel font-bold text-white tracking-normal select-none"
               style={{
                 textShadow:
                   '3px 3px 0 #0d3824, 6px 6px 0 #051910, 8px 8px 0 #020d08, 0 10px 30px rgba(0,0,0,0.85), 0 0 35px rgba(115,186,37,0.45)',
@@ -190,7 +190,7 @@ export default function SynergyHero() {
               openSUSE
             </span>
             <span
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-pixel font-bold text-[#73ba25] tracking-normal select-none"
+              className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-pixel font-bold text-[#73ba25] tracking-normal select-none"
               style={{
                 textShadow:
                   '3px 3px 0 #2b5714, 6px 6px 0 #051910, 8px 8px 0 #020d08, 0 10px 30px rgba(0,0,0,0.85), 0 0 35px rgba(0,240,255,0.5)',
@@ -201,12 +201,12 @@ export default function SynergyHero() {
           </div>
 
           {/* Subtitle Ribbon */}
-          <div className="font-pixel text-xs sm:text-sm md:text-base tracking-[0.28em] text-[#00f0ff] uppercase mt-2.5 drop-shadow-[0_0_12px_rgba(0,240,255,0.6)]">
+          <div className="font-pixel text-[11px] sm:text-sm md:text-base tracking-[0.2em] sm:tracking-[0.28em] text-[#00f0ff] uppercase mt-2.5 drop-shadow-[0_0_12px_rgba(0,240,255,0.6)]">
             BENGALURU CONNECT
           </div>
 
           {/* Minecraft Splash Bouncing Tag */}
-          <div className="absolute bottom-5 sm:bottom-6 md:bottom-7 -right-8 sm:-right-12 md:-right-16 z-20 pointer-events-none">
+          <div className="absolute bottom-5 sm:bottom-6 md:bottom-7 -right-3 sm:-right-8 md:-right-16 z-20 pointer-events-none">
             <div className="mc-splash text-[6.5px] sm:text-[7.5px] md:text-[8px]">
               {splashes[splashIdx]}
             </div>

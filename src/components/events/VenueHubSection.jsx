@@ -396,7 +396,10 @@ export default function VenueHubSection() {
 
         {/* Live Interactive Map Viewport with Protected Scroll Shield */}
         <div
-          className="relative w-full h-[360px] sm:h-[400px] bg-[#050a08] overflow-hidden group"
+          id="venue-map-chassis"
+          onMouseEnter={() => { window.__isMapHovered = true; }}
+          onMouseLeave={() => { window.__isMapHovered = false; }}
+          className="relative w-full h-[300px] sm:h-[400px] bg-[#050a08] overflow-hidden group rounded-b-xl"
         >
           <iframe
             title="S-VYASA Sattva Global City Map"
