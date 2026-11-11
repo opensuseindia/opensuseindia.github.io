@@ -25,8 +25,8 @@ import About from './pages/About';
 import Venue from './pages/Venue';
 import FAQ from './pages/FAQ';
 import Register from './pages/Register';
-import Login from './pages/Login';
-import Dashboard from './pages/Dashboard';
+import Login from './pages/login';
+import Dashboard from './pages/dashboard';
 import Admin from './pages/Admin';
 import NotFound from './pages/NotFound';
 
