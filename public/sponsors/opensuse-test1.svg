@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 90" width="360" height="90">
+  <image href="/opensuse-logo.png" x="12" y="11" width="68" height="68" />
+  <g transform="translate(96, 0)">
+    <text x="0" y="55" font-family="-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif" font-size="44" letter-spacing="-1">
+      <tspan font-weight="400" fill="#0c322c">open</tspan><tspan font-weight="900" fill="#73ba25">SUSE</tspan>
+    </text>
+    <text x="2" y="75" font-family="-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif" font-weight="700" font-size="11" fill="#73ba25" letter-spacing="3">
+      PROJECT
+    </text>
+  </g>
+</svg>

@@ -112,7 +112,7 @@ function Particles({ bgColor }) {
   )
 }
 
-export default function Hero3D({ bgColor = '#0a0a0a' }) {
+export default function Hero3D({ bgColor = '#000000' }) {
   return (
     <div className="relative w-[800px] h-[400px] overflow-hidden"> 
       <Canvas 

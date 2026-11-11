@@ -1,0 +1,1501 @@
+{
+  "event": {
+    "name": "openSUSE India – Bengaluru Connect 2027",
+    "shortName": "openSUSE BLR 2027",
+    "tagline": "Two days of open source learning, collaboration and building.",
+    "motto": "Learn. Build. Contribute.",
+    "dateDisplay": "Two consecutive days in January 2027 (Exact dates TBA)",
+    "tentativeMonth": "January 2027",
+    "venue": "Newton School of Technology, Bengaluru",
+    "venueAddress": "Newton School of Technology Campus, Off Sarjapur Road / Electronic City Corridor, Bengaluru, Karnataka, India",
+    "venueType": "College collaboration (Venue, internet & basic facilities provided free/in-kind)",
+    "participantCap": 250,
+    "supportCrewCap": 30,
+    "totalWorkingHeadcount": 280,
+    "maxTeams": 83,
+    "buildDurationHours": 20,
+    "buildStart": "Day 1 14:30 IST (First Commit Ceremony)",
+    "buildEnd": "Day 2 10:30 IST (Repository & Commit Freeze)",
+    "budgetEnvelopeINR": 257840,
+    "conditionalPrizePoolINR": 50000,
+    "sideRewardsPoolINR": 6000,
+    "totalRewardTShirts": 25,
+    "confirmedCashINR": 0,
+    "fundingGapINR": 257840,
+    "status": "Decision-ready plan, provisional budget approval & sponsor outreach phase"
+  },
+  "organizers": [
+    {
+      "id": "org-1",
+      "name": "Divyanshu Prakash",
+      "role": "Core Organizer",
+      "responsibility": "Event coordination, community/funder liaison, website and budget register",
+      "email": "divyanshu@opensuse.org",
+      "github": "divyanshuprakas-h",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": "org-2",
+      "name": "Dushyant Acharya",
+      "role": "Program & Judging Lead",
+      "responsibility": "Program, speaker/mentor scheduling, Buildathon rules and judging",
+      "email": "dushyant@opensuse.org",
+      "github": "dushyant-acharya",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": "org-3",
+      "name": "Rithull Raj Kallat",
+      "role": "Operations & Logistics Lead",
+      "responsibility": "Venue liaison, volunteer rosters, catering, logistics and safety readiness",
+      "email": "rithull@opensuse.org",
+      "github": "rithull-raj",
+      "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80"
+    }
+  ],
+  "tracks": [
+    {
+      "id": "track-1",
+      "number": "01",
+      "name": "Terminal Titans",
+      "slug": "terminal-titans",
+      "theme": "Linux CLI and Productivity",
+      "description": "Build a useful command line tool: file organizer, terminal tutor, backup utility, or Zypper helper.",
+      "difficulty": "Beginner to Intermediate",
+      "tags": [
+        "CLI",
+        "Bash",
+        "Rust",
+        "Go",
+        "Zypper",
+        "Productivity"
+      ],
+      "icon": "Terminal",
+      "starterIdeas": [
+        "Zypper Package Helper with interactive visual search & history rollback",
+        "Terminal Tutor: Gamified CLI interactive learning environment in curses/ratatui",
+        "Smart File Organizer with automated MIME detection and deduplication",
+        "Snapshot aware backup utility integrating with Btrfs/Snapper"
+      ],
+      "rubricFocus": "CLI ergonomics, command line flags (POSIX/GNU standards), documentation, practical daily usefulness."
+    },
+    {
+      "id": "track-2",
+      "number": "02",
+      "name": "Root Access",
+      "slug": "root-access",
+      "theme": "Linux Security and Privacy",
+      "description": "Create a defensive permissions auditor, suspicious login explainer, or hardening assistant. Intermediate to advanced; use only authorized sandbox systems.",
+      "difficulty": "Intermediate to Advanced",
+      "tags": [
+        "Security",
+        "Hardening",
+        "AppArmor",
+        "SELinux",
+        "Permissions",
+        "Auditd"
+      ],
+      "icon": "ShieldAlert",
+      "starterIdeas": [
+        "AppArmor Profile Visualizer & interactive policy generator for desktop apps",
+        "Defensive sudo / auth.log analyzer explaining anomalous logins in plain English",
+        "Systemd Service Hardening Assistant checking ProtectSystem & CapabilityBoundingSet",
+        "Container vulnerability scanner tailored for lightweight openSUSE MicroOS images"
+      ],
+      "rubricFocus": "Defensive rigor, sandboxing safety, accuracy of audit rules, privacy first design without credential leakage."
+    },
+    {
+      "id": "track-3",
+      "number": "03",
+      "name": "GeekoOps",
+      "slug": "geeko-ops",
+      "theme": "Automation, DevOps and Infrastructure",
+      "description": "Improve builds, tests, packaging or deployment: OBS (Open Build Service) status dashboard, openQA explorer or container helper.",
+      "difficulty": "Intermediate to Advanced",
+      "tags": [
+        "DevOps",
+        "OBS",
+        "openQA",
+        "CI/CD",
+        "Packaging",
+        "RPM",
+        "Containers"
+      ],
+      "icon": "Cpu",
+      "starterIdeas": [
+        "OBS Build Matrix Dashboard with real time SSE build notifications & dependency graph",
+        "openQA Visual Test Inspector surfacing needle matching test video diffs",
+        "Automated RPM specfile linter & multi architecture test harness",
+        "Podman / MicroOS declarative container orchestrator with transactional update verification"
+      ],
+      "rubricFocus": "Integration depth with openSUSE tools (OBS/openQA), reliability, build reproducibility, CI/CD pipeline efficiency."
+    },
+    {
+      "id": "track-4",
+      "number": "04",
+      "name": "Desktop Reboot",
+      "slug": "desktop-reboot",
+      "theme": "Linux Desktop and User Experience",
+      "description": "Improve onboarding, accessibility or everyday desktop use. Examples: accessible launcher, package discovery or setup assistant.",
+      "difficulty": "All Levels",
+      "tags": [
+        "Desktop UX",
+        "KDE",
+        "GNOME",
+        "Accessibility",
+        "Wayland",
+        "Flatpak"
+      ],
+      "icon": "Monitor",
+      "starterIdeas": [
+        "First Time openSUSE Setup Wizard welcoming users with hardware driver check and curated app bundles",
+        "High contrast screen reader optimized launcher for Wayland desktops",
+        "Unified Flatpak / RPM package discovery UI with permissions breakdown",
+        "Quick YaST Control Center widget for modern desktop system management"
+      ],
+      "rubricFocus": "Design craftsmanship, intuitive onboarding, accessibility (screen reader / keyboard nav), seamless desktop integration."
+    },
+    {
+      "id": "track-5",
+      "number": "05",
+      "name": "Upstream Heroes",
+      "slug": "upstream-heroes",
+      "theme": "Real Open Source Contributions",
+      "description": "Address an existing issue with code, documentation, tests, translations or accessibility. All levels. A submitted contribution can qualify without a maintainer merge.",
+      "difficulty": "All Levels",
+      "tags": [
+        "Upstream",
+        "FOSS",
+        "Bug Fix",
+        "Translations",
+        "Docs",
+        "PR/MR"
+      ],
+      "icon": "GitPullRequest",
+      "starterIdeas": [
+        "Resolve confirmed open issues on openSUSE tools (YaST, Zypper, OWS, transactional update)",
+        "Write missing documentation, man pages, or interactive guides for Leap / Tumbleweed",
+        "Create Hindi, Kannada, Tamil, or Telugu translations for openSUSE desktop tools",
+        "Implement automated regression test suites for upstream community utilities"
+      ],
+      "rubricFocus": "Upstream alignment, submission quality, etiquette, clear problem diagnosis, thorough tests/documentation."
+    },
+    {
+      "id": "track-6",
+      "number": "06",
+      "name": "What Does Linux Need Next?",
+      "slug": "what-linux-needs-next",
+      "theme": "Open Innovation and Community Impact",
+      "description": "Identify a real Linux/openSUSE community need and build an original response. Explain the users, evidence of need and measurable value.",
+      "difficulty": "All Levels",
+      "tags": [
+        "Innovation",
+        "Community",
+        "AI in Linux",
+        "Ecosystem",
+        "Future Tech"
+      ],
+      "icon": "Sparkles",
+      "starterIdeas": [
+        "Offline first Linux documentation and package mirror hub for resource constrained schools",
+        "Local LLM CLI copilot trained strictly on openSUSE man pages and wiki guides",
+        "Zero config Linux audio & screen casting studio setup tool for educators",
+        "Decentralized peer to peer package caching daemon for local campus hackathons"
+      ],
+      "rubricFocus": "Clarity of user need, evidence of research, originality of response, demonstration of measurable community value."
+    }
+  ],
+  "schedule": {
+    "day1": [
+      {
+        "id": "d1-1",
+        "time": "09:00 – 09:30",
+        "title": "Check-in, QR Passport Activation & Welcome Refreshments",
+        "type": "logistics",
+        "desc": "Attendee arrivals at Newton School of Technology, QR pass scanning, badge collection, digital passport activation, and welcome tea/coffee."
+      },
+      {
+        "id": "d1-2",
+        "time": "09:30 – 09:45",
+        "title": "Welcome, openSUSE Introduction, Access & Safety Briefing",
+        "type": "keynote",
+        "desc": "Opening remarks by the core organizing team; introduction to openSUSE ethos, code of conduct, overnight guidelines, and venue orientation."
+      },
+      {
+        "id": "d1-3",
+        "time": "09:45 – 10:15",
+        "title": "Talk 1: Linux Unlocked: Beyond Windows & macOS",
+        "type": "talk",
+        "speaker": "Community Speaker TBA",
+        "desc": "Why Linux powers 96% of the world's top servers, the architecture of freedom, and why desktop Linux is entering a golden age."
+      },
+      {
+        "id": "d1-4",
+        "time": "10:15 – 10:25",
+        "title": "Break & Transition",
+        "type": "break",
+        "desc": "10-minute quick stretch and informal exchange."
+      },
+      {
+        "id": "d1-5",
+        "time": "10:25 – 10:55",
+        "title": "Talk 2: Inside openSUSE: From Desktop to Developer Tools",
+        "type": "talk",
+        "speaker": "openSUSE Contributor TBA",
+        "desc": "Deep dive into openSUSE Tumbleweed, Leap, MicroOS, YaST, Zypper, Open Build Service (OBS), and automated testing with openQA."
+      },
+      {
+        "id": "d1-6",
+        "time": "10:55 – 11:05",
+        "title": "Break & Transition",
+        "type": "break",
+        "desc": "10-minute hallway catch-up."
+      },
+      {
+        "id": "d1-7",
+        "time": "11:05 – 11:35",
+        "title": "Talk 3: From User to Contributor: Building for Open Source",
+        "type": "talk",
+        "speaker": "Upstream Advocate TBA",
+        "desc": "How to find beginner issues, communicate in public mailing lists/Git, write patches, respect project licenses, and build a lasting FOSS career."
+      },
+      {
+        "id": "d1-8",
+        "time": "11:35 – 11:50",
+        "title": "Break and Workshop Room Transition",
+        "type": "break",
+        "desc": "Move to designated computer labs and workshop rooms."
+      },
+      {
+        "id": "d1-9",
+        "time": "11:50 – 12:35",
+        "title": "Parallel 45 Minute Workshops",
+        "type": "workshop",
+        "tracks": [
+          {
+            "name": "Track A: Linux & openSUSE Starter Lab",
+            "desc": "Hands-on command line fundamentals, package management with Zypper, basic shell scripts, and system navigation. 100 Starter Lab completions targeted."
+          },
+          {
+            "name": "Track B: From Code Push to Real Users (CI/CD)",
+            "desc": "Using a prepared project to practice automated unit tests, build pipelines, package generation, deployment and instant rollback mechanics."
+          }
+        ]
+      },
+      {
+        "id": "d1-10",
+        "time": "12:35 – 13:00",
+        "title": "Community Networking & Optional Geeko Quest Kickoff",
+        "type": "activity",
+        "desc": "Explore the venue, meet mentors, unlock initial Geeko Quest digital missions, and enjoy the Geeko Arcade."
+      },
+      {
+        "id": "d1-11",
+        "time": "13:00 – 14:00",
+        "title": "Lunch for All Registered Attendees (280 Servings)",
+        "type": "meal",
+        "desc": "Wholesome campus vegetarian lunch, team formation matching, and mentor consultations."
+      },
+      {
+        "id": "d1-12",
+        "time": "14:00 – 14:20",
+        "title": "Buildathon Briefing: Tracks, Rules, Scoring & Mentors",
+        "type": "briefing",
+        "desc": "Detailed breakdown of the 6 tracks, judging criteria (25/25/20/15/15), AI assistance declaration rules, and mentor roster introduction."
+      },
+      {
+        "id": "d1-13",
+        "time": "14:20 – 14:30",
+        "title": "Team Readiness, Countdown & First Commit Prep",
+        "type": "milestone",
+        "desc": "Final repository setups, license declarations, and countdown."
+      },
+      {
+        "id": "d1-14",
+        "time": "14:30",
+        "title": "Official Build Start & First Commit Ceremony",
+        "type": "milestone",
+        "desc": "The 20 hour Buildathon clock officially starts! All teams push their initial commit."
+      },
+      {
+        "id": "d1-15",
+        "time": "14:30 – 17:00",
+        "title": "Build Sprint 1 · Mentor Desk & Optional Quest/Arcade",
+        "type": "sprint",
+        "desc": "Intense collaborative hacking. Dedicated mentor help desk active. Geeko Arcade open for quick 5-min cognitive breaks."
+      },
+      {
+        "id": "d1-16",
+        "time": "17:00 – 17:30",
+        "title": "Evening Refreshments & Chai for Builders and Working Crew",
+        "type": "meal",
+        "desc": "Hot chai, coffee, and savory snacks served to keep energy high."
+      },
+      {
+        "id": "d1-17",
+        "time": "17:30 – 18:30",
+        "title": "Build Sprint 2 & Mentor Check-ins",
+        "type": "sprint",
+        "desc": "Mentors circulate through team tables to review architecture and help reduce scope where needed."
+      },
+      {
+        "id": "d1-18",
+        "time": "18:30 – 19:30",
+        "title": "Dinner for Overnight Builders & Crew (Staggered Serving)",
+        "type": "meal",
+        "desc": "Warm dinner served in staggered queues with QR token scanning to avoid long wait times."
+      },
+      {
+        "id": "d1-19",
+        "time": "19:30 – 23:00",
+        "title": "Build Sprint 3 & Optional Progress Check",
+        "type": "sprint",
+        "desc": "Quiet rest spaces open. Substantial core logic and interface implementation."
+      },
+      {
+        "id": "d1-20",
+        "time": "23:00 – 23:30",
+        "title": "Late-Night Snacks for Overnight Cohort",
+        "type": "meal",
+        "desc": "Energy boosters, fruit, light bites, and hot beverages served quietly."
+      },
+      {
+        "id": "d1-21",
+        "time": "23:30 – 00:00",
+        "title": "Overnight Staff Handover & Safety Check",
+        "type": "logistics",
+        "desc": "Night duty roster transition; duty organizer, 2 volunteers, and technical mentor on active rotation."
+      }
+    ],
+    "day2": [
+      {
+        "id": "d2-1",
+        "time": "00:00 – 01:00",
+        "title": "Quiet Build / Rest Period",
+        "type": "sprint",
+        "desc": "Low lighting in build halls, designated sleeping/rest rooms accessible, mentors on active rotation."
+      },
+      {
+        "id": "d2-2",
+        "time": "01:00 – 01:30",
+        "title": "Midnight Bug Hunt (Rookie & Expert Challenges)",
+        "type": "competition",
+        "desc": "Optional individual 30 minute sprint. Rookie: repair shell script. Expert: diagnose sandbox service/config failure. Rs. 2,000 prize pool."
+      },
+      {
+        "id": "d2-3",
+        "time": "01:30 – 06:30",
+        "title": "Quiet Build / Rest Period with Staffed Help Desk",
+        "type": "sprint",
+        "desc": "Continued building and rest. First aid and safety desk staffed throughout."
+      },
+      {
+        "id": "d2-4",
+        "time": "06:30 – 07:30",
+        "title": "Breakfast for Overnight Builders & Crew",
+        "type": "meal",
+        "desc": "South Indian breakfast, hot idli, vada, sambar, coffee and tea to recharge for the home stretch."
+      },
+      {
+        "id": "d2-5",
+        "time": "07:30 – 09:30",
+        "title": "Ship at Sunrise: Final Sprint, Documentation & Demo Prep",
+        "type": "sprint",
+        "desc": "Final bug fixes, README documentation, license check, screen recordings, and offline demo preparation."
+      },
+      {
+        "id": "d2-6",
+        "time": "09:30 – 10:30",
+        "title": "Submission Support & Final Validation",
+        "type": "milestone",
+        "desc": "Staff assistance for repository links, commit hashing, and project metadata verification. No deadline extensions!"
+      },
+      {
+        "id": "d2-7",
+        "time": "10:30",
+        "title": "Hard Submission Deadline (Repository & Commit Freeze)",
+        "type": "milestone",
+        "desc": "Buildathon officially closes at 20h. Repositories must be frozen with declared commit hashes."
+      },
+      {
+        "id": "d2-8",
+        "time": "10:30 – 11:00",
+        "title": "Break & Demo Arena Setup",
+        "type": "logistics",
+        "desc": "Teams take assigned numbered exhibition tables (1–83). Judging panel allocations confirmed."
+      },
+      {
+        "id": "d2-9",
+        "time": "11:00 – 13:00",
+        "title": "83 Team Demo Arena & People's Choice Voting",
+        "type": "demo",
+        "desc": "6 parallel lanes, 12 judges, 83 team spaces. 7 minutes per team demo + Q&A. Verified attendee People's Choice voting live."
+      },
+      {
+        "id": "d2-10",
+        "time": "13:00 – 13:15",
+        "title": "Top Six Finalists Announced & Stage Preparation",
+        "type": "milestone",
+        "desc": "Panel score normalization completes; six highest-scoring teams announced to present on main auditorium stage."
+      },
+      {
+        "id": "d2-11",
+        "time": "13:15 – 14:15",
+        "title": "Six Finalist Stage Pitches",
+        "type": "presentation",
+        "desc": "Each finalist receives 7 minutes of stage demo + 3 minutes of live Q&A before all judges and attendees."
+      },
+      {
+        "id": "d2-12",
+        "time": "14:15 – 14:30",
+        "title": "Judges Deliberation & Community Highlights",
+        "type": "deliberation",
+        "desc": "Lead judges finalize 1st, 2nd, 3rd ranking; showcase of upstream contributions and community stories."
+      },
+      {
+        "id": "d2-13",
+        "time": "14:30 – 14:35",
+        "title": "Five-Minute Event Highlight Video",
+        "type": "presentation",
+        "desc": "Candid video compilation of 20 hours of building, laughter, code reviews, and community spirit."
+      },
+      {
+        "id": "d2-14",
+        "time": "14:35 – 14:50",
+        "title": "Awards Ceremony: Top 3, Finalists & Side-Event Rewards",
+        "type": "ceremony",
+        "desc": "Top 3 trophies & awards, Finalist certificates, Bug Hunt & Arcade winners, and reward T-shirt distribution."
+      },
+      {
+        "id": "d2-15",
+        "time": "14:50 – 14:55",
+        "title": "Thank-You & Invitation to openSUSE India Community",
+        "type": "closing",
+        "desc": "Next steps for upstream project incubation and community monthly meetups."
+      },
+      {
+        "id": "d2-16",
+        "time": "14:55 – 15:00",
+        "title": "Grand Group Photograph & Farewell",
+        "type": "closing",
+        "desc": "All 250 attendees, volunteers, mentors, and organizers unite for the flagship group photo."
+      },
+      {
+        "id": "d2-17",
+        "time": "15:00 – 16:00",
+        "title": "Participant Exit, Cleanup & Venue Handover",
+        "type": "logistics",
+        "desc": "Equipment returns, room cleaning, recycling, and official college facility handover."
+      }
+    ],
+    "importantNotice": "Day 2 lunch is NOT included in the event catering budget. Attendees are informed in advance; nearby campus food courts and permitted eateries are recommended. Breakfast is served for the overnight cohort."
+  },
+  "arcadeGames": [
+    {
+      "id": "game-1",
+      "name": "Terminal Escape",
+      "slug": "terminal-escape",
+      "duration": "5–10 mins",
+      "type": "Interactive Terminal Puzzle",
+      "description": "Solve realistic Linux command puzzles inside a simulated web terminal to locate encrypted files, fix permissions, and unlock the exit key.",
+      "badge": "Shell Master",
+      "reward": "Arcade Points & Reward T-Shirt contender",
+      "highScore": 1000,
+      "highScorer": "Terminal Hacker"
+    },
+    {
+      "id": "game-2",
+      "name": "Linux Trivia Blitz",
+      "slug": "linux-trivia-blitz",
+      "duration": "3–5 mins",
+      "type": "Rapid-Fire Quiz",
+      "description": "Answer 10 fast-paced questions covering Linux kernel trivia, openSUSE history, YaST, Zypper, and open source licenses against the clock.",
+      "badge": "Tumbleweed Sage",
+      "reward": "Arcade Points & Leaderboard Ranking",
+      "highScore": 1250
+    },
+    {
+      "id": "game-3",
+      "name": "Command Match",
+      "slug": "command-match",
+      "duration": "3–5 mins",
+      "type": "Interactive Matcher",
+      "description": "Match essential Linux & openSUSE commands (systemctl, zypper, journalctl, chmod, awk, tar) to their exact operational descriptions with speed and precision.",
+      "badge": "Syntax Ninja",
+      "reward": "Arcade Points & Leaderboard Ranking",
+      "highScore": 840
+    },
+    {
+      "id": "game-4",
+      "name": "Find the Geeko",
+      "slug": "find-the-geeko",
+      "duration": "5–10 mins",
+      "type": "QR Clue Trail",
+      "description": "Decode cryptic clues corresponding to approved public venue areas at Newton School of Technology to discover hidden Geeko QR checkpoints.",
+      "badge": "Geeko Tracker",
+      "reward": "Arcade Points & Swag Contender",
+      "highScore": 1100
+    }
+  ],
+  "questMissions": [
+    {
+      "id": "quest-1",
+      "code": "Q-01",
+      "title": "First Terminal Command",
+      "description": "Run your first command in an openSUSE terminal session or the Starter Lab environment and inspect system release information.",
+      "xp": 150,
+      "badge": "Terminal Initiate",
+      "verificationMethod": "Volunteer signature / Lab Mentor verification",
+      "icon": "Terminal"
+    },
+    {
+      "id": "quest-2",
+      "code": "Q-02",
+      "title": "Explore an openSUSE Tool",
+      "description": "Launch YaST, query a package via Zypper, or browse the Open Build Service (OBS) portal for a real community package.",
+      "xp": 250,
+      "badge": "Geeko Explorer",
+      "verificationMethod": "Show YaST or OBS screen to volunteer desk",
+      "icon": "Cpu"
+    },
+    {
+      "id": "quest-3",
+      "code": "Q-03",
+      "title": "Meet an openSUSE Contributor",
+      "description": "Have a 5 minute conversation with an openSUSE speaker or mentor, ask about their open source journey, and exchange GitHub handles.",
+      "xp": 200,
+      "badge": "Community Bridge",
+      "verificationMethod": "Contributor pass endorsement",
+      "icon": "Users"
+    },
+    {
+      "id": "quest-4",
+      "code": "Q-04",
+      "title": "Help a Fellow Builder",
+      "description": "Assist another team or participant with debugging, setting up Git, configuring dependencies, or clarifying a build error.",
+      "xp": 300,
+      "badge": "Spirit of FOSS",
+      "verificationMethod": "Peer nomination / Volunteer check",
+      "icon": "HeartHandshake"
+    }
+  ],
+  "bugHunt": {
+    "schedule": "Day 2, 01:00 – 01:30 IST (30 Minutes)",
+    "prizePoolINR": 2000,
+    "rewardShirts": 2,
+    "rules": "Optional individual competition. Participants select either Rookie or Expert challenge. Solutions tested against published automated checks. Ranked by completeness, then timestamp.",
+    "rookieChallenge": {
+      "id": "rookie-1",
+      "title": "Repair the Deploy Automation Script",
+      "language": "bash",
+      "description": "This shell script meant for backing up configuration files and restarting the openSUSE web service contains 3 deliberate syntax and logic errors. Identify and fix them so it passes the automated test suite.",
+      "initialCode": "#!/bin/bash\n# Backup & Service Check Script - openSUSE BLR 2027\n# TASK: Fix the 3 deliberate bugs in this script\n\nBACKUP_DIR=\"/var/backup/geeko\"\nTIMESTAMP=$(date +%Y%m%d_%H%M%S)\n\n# BUG 1: Syntax error in test condition\nif [ -d \"$BACKUP_DIR\"\n    echo \"Directory exists\"\nelse\n    mkdir -p \"$BACKUP_DIR\"\nfi\n\n# BUG 2: Unquoted variable expansion with spaces in path\nTARGET_FILE=\"/etc/geeko config/settings.conf\"\ntar -czf \"$BACKUP_DIR/backup_$TIMESTAMP.tar.gz\" $TARGET_FILE\n\n# BUG 3: Inverted exit status check for zypper service\nsystemctl is-active --quiet apache2\nif [ $? -ne 0 ]; then\n    echo \"SUCCESS: Service is running smoothly.\"\n    exit 0\nelse\n    echo \"ERROR: Service is stopped!\"\n    exit 1\nfi\n",
+      "solutionHint": "Check missing bracket on line 8, add quotes around $TARGET_FILE on line 16, and check exit status logic on line 20 (0 means active in systemctl)."
+    },
+    "expertChallenge": {
+      "id": "expert-1",
+      "title": "Diagnose Service Permission & SELinux Sandbox Failure",
+      "language": "bash",
+      "description": "An isolated openQA worker daemon fails to write artifacts to /srv/obs-worker/data due to restrictive systemd ProtectSystem directives and file ACL permissions. Diagnose the misconfiguration and write the correct override commands.",
+      "errorLog": "systemd[1]: obs-worker.service: Failed at step NAMESPACE spawning /usr/bin/obs-worker: Read-only file system\naudit[1842]: AVC apparmor=\"DENIED\" operation=\"open\" profile=\"/usr/bin/obs-worker\" name=\"/srv/obs-worker/data/build.lock\"\nobs-worker[1843]: Fatal error: Unable to obtain write lock on /srv/obs-worker/data. Exit code 13 (EACCES)",
+      "tasks": [
+        "Create systemd drop-in override: ReadWritePaths=/srv/obs-worker/data",
+        "Adjust AppArmor abstraction for /srv/obs-worker/data/** rw,",
+        "Set correct ownership chown -R obsworker:obsworker /srv/obs-worker/data"
+      ]
+    }
+  },
+  "demoArena": {
+    "totalSpaces": 83,
+    "lanes": 6,
+    "judgesPerPanel": 2,
+    "totalJudges": 12,
+    "maxTeamsPerLane": 14,
+    "timePerTeamMinutes": 7,
+    "bufferMinutes": 22,
+    "rubric": [
+      {
+        "name": "Real-world problem and usefulness",
+        "weight": 25,
+        "desc": "Addresses a genuine friction or practical need in Linux / developer ecosystems."
+      },
+      {
+        "name": "Technical execution",
+        "weight": 25,
+        "desc": "Code quality, architecture, error handling, performance, and stability."
+      },
+      {
+        "name": "Linux/openSUSE relevance",
+        "weight": 20,
+        "desc": "Meaningful engagement with Linux tools, packaging, desktop, CLI, or openSUSE stack."
+      },
+      {
+        "name": "Creativity and innovation",
+        "weight": 15,
+        "desc": "Novelty of approach, creative problem framing, or standout user experience."
+      },
+      {
+        "name": "Documentation, demo and future potential",
+        "weight": 15,
+        "desc": "Clear README, license declaration, reproducible setup, and articulate presentation."
+      }
+    ],
+    "peoplesChoice": {
+      "description": "Every verified attendee holds exactly 1 People's Choice vote through their digital passport. Audited for duplicates. Digital recognition badge awarded separately from judge rankings."
+    }
+  },
+  "budget": {
+    "totalPlanningEnvelopeINR": 257840,
+    "directCostsINR": 234400,
+    "contingency10PercentINR": 23440,
+    "confirmedCashINR": 0,
+    "fundingGapINR": 257840,
+    "collegeInKindValueINR": 150000,
+    "catering": [
+      {
+        "item": "Welcome refreshments",
+        "qty": 280,
+        "unitRateINR": 30,
+        "totalINR": 8400,
+        "notes": "Day 1 morning arrivals"
+      },
+      {
+        "item": "Day 1 lunch",
+        "qty": 280,
+        "unitRateINR": 140,
+        "totalINR": 39200,
+        "notes": "Wholesome campus vegetarian lunch"
+      },
+      {
+        "item": "Evening snacks / tea",
+        "qty": 280,
+        "unitRateINR": 25,
+        "totalINR": 7000,
+        "notes": "Hot chai and savory snacks"
+      },
+      {
+        "item": "Overnight dinner",
+        "qty": 280,
+        "unitRateINR": 140,
+        "totalINR": 39200,
+        "notes": "Staggered warm dinner"
+      },
+      {
+        "item": "Late-night snacks",
+        "qty": 280,
+        "unitRateINR": 35,
+        "totalINR": 9800,
+        "notes": "Midnight energy snacks"
+      },
+      {
+        "item": "Day 2 breakfast",
+        "qty": 280,
+        "unitRateINR": 60,
+        "totalINR": 16800,
+        "notes": "South Indian breakfast for overnight builders/crew"
+      },
+      {
+        "item": "Drinking water (college provided)",
+        "qty": 1,
+        "unitRateINR": 0,
+        "totalINR": 0,
+        "notes": "Provided free by college facilities"
+      }
+    ],
+    "cateringSubtotalINR": 120400,
+    "operations": [
+      {
+        "item": "Venue / facilities - college in-kind",
+        "qty": 1,
+        "rateINR": 0,
+        "totalINR": 0
+      },
+      {
+        "item": "Existing AV - college basic facilities",
+        "qty": 1,
+        "rateINR": 0,
+        "totalINR": 0
+      },
+      {
+        "item": "Internet (350+ devices) - college in-kind",
+        "qty": 1,
+        "rateINR": 0,
+        "totalINR": 0
+      },
+      {
+        "item": "Basic power facilities - college",
+        "qty": 1,
+        "rateINR": 0,
+        "totalINR": 0
+      },
+      {
+        "item": "Security: guard-shift allowances",
+        "qty": 4,
+        "rateINR": 3000,
+        "totalINR": 12000
+      },
+      {
+        "item": "Routine cleaning - college facilities",
+        "qty": 2,
+        "rateINR": 0,
+        "totalINR": 0
+      },
+      {
+        "item": "First-aid / response cover allowance",
+        "qty": 1,
+        "rateINR": 6000,
+        "totalINR": 6000
+      },
+      {
+        "item": "Rest-area supplies",
+        "qty": 1,
+        "rateINR": 4000,
+        "totalINR": 4000
+      },
+      {
+        "item": "Signage / QR / demo labels",
+        "qty": 1,
+        "rateINR": 5000,
+        "totalINR": 5000
+      },
+      {
+        "item": "Participant + support badges",
+        "qty": 280,
+        "rateINR": 20,
+        "totalINR": 5600
+      },
+      {
+        "item": "Stickers",
+        "qty": 300,
+        "rateINR": 8,
+        "totalINR": 2400
+      },
+      {
+        "item": "Side-activity reward pool",
+        "qty": 1,
+        "rateINR": 6000,
+        "totalINR": 6000
+      },
+      {
+        "item": "Reward T-shirts (incl. printing)",
+        "qty": 25,
+        "rateINR": 300,
+        "totalINR": 7500
+      },
+      {
+        "item": "Top-three team trophies",
+        "qty": 3,
+        "rateINR": 1500,
+        "totalINR": 4500
+      },
+      {
+        "item": "Certificates: print / stationery pool",
+        "qty": 1,
+        "rateINR": 2000,
+        "totalINR": 2000
+      },
+      {
+        "item": "Media / editing / storage allowance",
+        "qty": 1,
+        "rateINR": 4000,
+        "totalINR": 4000
+      },
+      {
+        "item": "Local logistics / transport",
+        "qty": 1,
+        "rateINR": 5000,
+        "totalINR": 5000
+      }
+    ],
+    "operationsSubtotalINR": 64000,
+    "conditionalCashPrizesINR": 50000,
+    "fundingScenarios": [
+      {
+        "scenario": "Current status: no cash sponsors confirmed",
+        "sponsorCashINR": 0,
+        "remainingGapINR": 257840
+      },
+      {
+        "scenario": "Dedicated Prize Partner",
+        "sponsorCashINR": 50000,
+        "remainingGapINR": 207840
+      },
+      {
+        "scenario": "Above + Food Partner (Rs. 1,00,000) + 2 Community Partners (2 × Rs. 25,000)",
+        "sponsorCashINR": 200000,
+        "remainingGapINR": 57840
+      },
+      {
+        "scenario": "Above + T-shirt Partner (Rs. 8,250)",
+        "sponsorCashINR": 208250,
+        "remainingGapINR": 49590
+      },
+      {
+        "scenario": "Above + Operations Partner (Rs. 49,590) — Fully Funded",
+        "sponsorCashINR": 257840,
+        "remainingGapINR": 0
+      }
+    ],
+    "attendanceSensitivity": [
+      {
+        "case": "150 participants / all builders",
+        "servings": 180,
+        "cateringINR": 77400,
+        "totalWithContingencyINR": 208340
+      },
+      {
+        "case": "200 participants / all builders",
+        "servings": 230,
+        "cateringINR": 98900,
+        "totalWithContingencyINR": 233090
+      },
+      {
+        "case": "250 participants / all builders (base case cap)",
+        "servings": 280,
+        "cateringINR": 120400,
+        "totalWithContingencyINR": 257840
+      }
+    ]
+  },
+  "sponsorshipTiers": [
+    {
+      "id": "tier-prize",
+      "name": "Prize Partner",
+      "amountINR": 50000,
+      "description": "Directly powers the Rs. 25k, Rs. 15k, and Rs. 10k cash awards for the top three champion teams.",
+      "benefits": [
+        "Naming rights on Buildathon Champion Award checks",
+        "Prominent logo on event website hero and sponsor wall",
+        "Dedicated stage announcement & award presentation opportunity",
+        "Keynote slide branding and social media feature across openSUSE India channels",
+        "Custom branding on finalist certificate certificates"
+      ],
+      "badge": "Flagship"
+    },
+    {
+      "id": "tier-food",
+      "name": "Food & Hospitality Partner",
+      "amountINR": 100000,
+      "description": "Fuels 280 builders and support crew through 20 continuous hours of hacking (lunch, tea, dinner, late snacks, breakfast).",
+      "benefits": [
+        "Exclusive banner in dining & refreshment zones",
+        "Branded napkins / coffee cup sleeves or custom snack counters",
+        "Prominent logo on website and program booklet",
+        "Stage thank-you during welcoming and evening announcements",
+        "Dedicated mentor lounge branding"
+      ],
+      "badge": "Essential"
+    },
+    {
+      "id": "tier-community",
+      "name": "Community Partner (2 Available)",
+      "amountINR": 25000,
+      "description": "Supports open source tooling, lab virtualization, and community connectivity.",
+      "benefits": [
+        "Website sponsor logo and community shoutouts",
+        "Dedicated demo table in the community showcase lounge",
+        "Sticker distribution and recruitment flyer inclusion in registration desk",
+        "Acknowledgment in the official community recap report"
+      ],
+      "badge": "Popular"
+    },
+    {
+      "id": "tier-tshirt",
+      "name": "T-Shirt & Swag Partner",
+      "amountINR": 8250,
+      "description": "Funds the official 25 printed reward T-shirts for Buildathon winners, Bug Hunt champions, and Quest achievers.",
+      "benefits": [
+        "Sponsor logo printed on the official openSUSE 2027 winner reward T-shirts",
+        "Website logo placement in Rewards & Swag showcase",
+        "Social media photo feature with the champion teams wearing the shirts"
+      ],
+      "badge": "Swag"
+    },
+    {
+      "id": "tier-ops",
+      "name": "Operations & Safety Partner",
+      "amountINR": 49590,
+      "description": "Covers night shift safety security personnel, first aid response equipment, badges, signage, and quiet rest supplies.",
+      "benefits": [
+        "Logo on all 280 participant & VIP lanyard badges",
+        "Branding on venue wayfinding signage and registration desk",
+        "Recognition in the opening safety briefing and farewell remarks"
+      ],
+      "badge": "Operations"
+    },
+    {
+      "id": "tier-inkind",
+      "name": "In-Kind / Tech Infrastructure Partner",
+      "amountINR": 0,
+      "description": "Cloud compute credits, GPU VM access for labs, livestreaming gear, or technical swag.",
+      "benefits": [
+        "Custom benefit package matched to the verified market replacement value of donated goods/services",
+        "Workshop or lab integration showcasing sponsor developer tools",
+        "Direct opt-in developer engagement during lab sessions"
+      ],
+      "badge": "Custom"
+    }
+  ],
+  "merchandiseCatalog": [
+    {
+      "id": "merch-1",
+      "name": "Official openSUSE Bengaluru 2027 'Learn. Build. Contribute.' Tee",
+      "category": "Apparel",
+      "priceINR": 499,
+      "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=600&q=80",
+      "description": "Heavyweight 240 GSM 100% bio-washed cotton in Deep Charcoal with emerald Geeko chameleon emblem and Bengaluru Connect 2027 sleeve print.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "badge": "Official Merchandise",
+      "note": "Note: Event T-shirts are merchandise available for purchase/preorder. Only 25 reward T-shirts are provided free to competition winners."
+    },
+    {
+      "id": "merch-2",
+      "name": "Geeko Chameleon Embroidered Cyber Hoodie",
+      "category": "Apparel",
+      "priceINR": 1299,
+      "image": "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80",
+      "description": "Premium fleece pullover hoodie with high-density embroidered openSUSE Geeko on chest, thumb loops, and headphone eyelet.",
+      "sizes": [
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "badge": "Limited Edition",
+      "note": "Pre-order collection at registration desk"
+    },
+    {
+      "id": "merch-3",
+      "name": "Geeko Holographic & Die-Cut Sticker Pack (8-pack)",
+      "category": "Swag",
+      "priceINR": 149,
+      "image": "https://images.unsplash.com/photo-1589384267710-7a170981ca78?auto=format&fit=crop&w=600&q=80",
+      "description": "UV-resistant vinyl stickers featuring openSUSE Tumbleweed, Leap, YaST, OBS, and playful Bengaluru tech puns.",
+      "sizes": [
+        "One Size"
+      ],
+      "badge": "Collector",
+      "note": "Instant pickup during registration"
+    },
+    {
+      "id": "merch-4",
+      "name": "Linux Terminal Desk Mat (900mm × 400mm)",
+      "category": "Accessories",
+      "priceINR": 799,
+      "image": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80",
+      "description": "Micro-textured waterproof cloth surface printed with Zypper & Linux command cheat sheet in dark forest palette.",
+      "sizes": [
+        "900x400x4mm"
+      ],
+      "badge": "Productivity",
+      "note": "Pre-orders reserved with attendee ID"
+    }
+  ],
+  "faq": [
+    {
+      "category": "General",
+      "q": "What is openSUSE India – Bengaluru Connect 2027?",
+      "a": "It is a flagship two-day open source technology conference and 20 hour Buildathon happening in January 2027 at Newton School of Technology, Bengaluru. It unites beginners, college students, Linux enthusiasts, and upstream contributors to learn Linux, master openSUSE tools, and build impactful software."
+    },
+    {
+      "category": "Hackathon & Building",
+      "q": "What is the Geeko Buildathon?",
+      "a": "The Geeko Buildathon is a 20 hour mentored hackathon running from Day 1 at 14:30 IST to Day 2 at 10:30 IST. Up to 83 teams (3–4 builders each, 250 participants total) choose one of six tracks to solve real developer, security, desktop, or community challenges."
+    },
+    {
+      "category": "Hackathon & Building",
+      "q": "Do I have to know Linux or openSUSE beforehand?",
+      "a": "No! The event is specifically designed for all experience levels. Day 1 includes beginner talks and hands on workshops like the 'Linux & openSUSE Starter Lab'. Mentors circulate throughout the 20 hours to guide newcomers."
+    },
+    {
+      "category": "Registration & Eligibility",
+      "q": "Who is eligible and is there a registration fee?",
+      "a": "Admission is 100% free! Anyone enthusiastic about open source software (students, working developers, hobbyists) may apply. Strict cap is 250 participants. Teams must have 3 to 4 members. For overnight building, participants must be 18+."
+    },
+    {
+      "category": "Overnight & Safety",
+      "q": "Can all participants stay overnight?",
+      "a": "Yes. The planning envelope and venue capacity accommodate all 250 participants overnight. A dedicated quiet rest area, load tested electrical circuits, campus security, and staffed first aid coverage are maintained throughout the night."
+    },
+    {
+      "category": "Food & Catering",
+      "q": "What meals are provided?",
+      "a": "The event budget provides: Day 1 welcome refreshments, Day 1 lunch, evening snacks & tea, overnight dinner, late-night snacks, and Day 2 breakfast (280 servings each). IMPORTANT: Day 2 lunch is NOT included. Attendees are informed in advance to arrange lunch from nearby college eateries or food courts."
+    },
+    {
+      "category": "Swag & Prizes",
+      "q": "Do all attendees get a free T-shirt?",
+      "a": "No. In strict accordance with the event's financial plan, only 25 reward T-shirts are budgeted for competition winners (Top 3 teams: up to 12 shirts; Bug Hunt winners: 2; Arcade winners: 4; Quest winners: 2; plus 5 size buffer). Attendees who wish to own an official event T-shirt can purchase or pre-order one via the event merchandise shop."
+    },
+    {
+      "category": "Judging & Rules",
+      "q": "How will projects be judged?",
+      "a": "All submitting teams showcase their projects in the 83-team Demo Arena across 6 parallel lanes. Judges score according to a published 5-point rubric: Real-world problem & usefulness (25%), Technical execution (25%), Linux/openSUSE relevance (20%), Creativity & innovation (15%), and Documentation/demo (15%). Six overall finalists present on the auditorium stage."
+    }
+  ],
+  "sampleTeams": [
+    {
+      "id": "team-101",
+      "name": "Kernel Knights",
+      "trackId": "track-1",
+      "trackName": "Terminal Titans",
+      "tableNumber": 14,
+      "laneNumber": 1,
+      "members": [
+        {
+          "name": "Aarav Sharma",
+          "email": "aarav@example.com",
+          "github": "aarav-kernel",
+          "role": "Team Lead"
+        },
+        {
+          "name": "Pooja Hegde",
+          "email": "pooja@example.com",
+          "github": "pooja-codes",
+          "role": "CLI Engineer"
+        },
+        {
+          "name": "Kiran Rao",
+          "email": "kiran@example.com",
+          "github": "kiran-dev",
+          "role": "Documentation"
+        }
+      ],
+      "projectTitle": "ZypSnap: Snapshot-Aware Zypper Assistant",
+      "projectDescription": "An interactive CLI tool that automates pre/post Btrfs snapshots for Zypper updates, with instant rollback and dependency diff previews.",
+      "repoUrl": "https://github.com/kernel-knights/zypsnap",
+      "commitHash": "7f4c9a1b8e23f044d67901",
+      "score": 92.5,
+      "isFinalist": true,
+      "votes": 38
+    },
+    {
+      "id": "team-102",
+      "name": "Daemon Divers",
+      "trackId": "track-2",
+      "trackName": "Root Access",
+      "tableNumber": 27,
+      "laneNumber": 2,
+      "members": [
+        {
+          "name": "Siddharth Verma",
+          "email": "sid@example.com",
+          "github": "sid-sec",
+          "role": "Security Lead"
+        },
+        {
+          "name": "Neha Patil",
+          "email": "neha@example.com",
+          "github": "neha-p",
+          "role": "Systems"
+        },
+        {
+          "name": "Devansh Nair",
+          "email": "devansh@example.com",
+          "github": "dev-nair",
+          "role": "Frontend"
+        }
+      ],
+      "projectTitle": "AppArmor Lens",
+      "projectDescription": "Visual profile inspector and real-time permission enforcement auditor for modern openSUSE desktop applications.",
+      "repoUrl": "https://github.com/daemon-divers/apparmor-lens",
+      "commitHash": "9a2b3c4d5e6f7a8b9c0d1e",
+      "score": 89,
+      "isFinalist": true,
+      "votes": 29
+    },
+    {
+      "id": "team-103",
+      "name": "Tumbleweed Turbo",
+      "trackId": "track-3",
+      "trackName": "GeekoOps",
+      "tableNumber": 42,
+      "laneNumber": 3,
+      "members": [
+        {
+          "name": "Rohan Kulkarni",
+          "email": "rohan@example.com",
+          "github": "rohan-k",
+          "role": "DevOps Lead"
+        },
+        {
+          "name": "Ananya Iyer",
+          "email": "ananya@example.com",
+          "github": "ananya-iyer",
+          "role": "Backend"
+        },
+        {
+          "name": "Gaurav Sen",
+          "email": "gaurav@example.com",
+          "github": "gaurav-s",
+          "role": "Tester"
+        },
+        {
+          "name": "Meera Das",
+          "email": "meera@example.com",
+          "github": "meera-d",
+          "role": "Cloud"
+        }
+      ],
+      "projectTitle": "OBS Matrix Live",
+      "projectDescription": "Next-gen Open Build Service dashboard displaying real-time build worker statuses, dependency trees, and failure analytics.",
+      "repoUrl": "https://github.com/tumbleweed-turbo/obs-matrix-live",
+      "commitHash": "11223344556677889900aa",
+      "score": 94,
+      "isFinalist": true,
+      "votes": 45
+    },
+    {
+      "id": "team-104",
+      "name": "Chameleon Craftsmen",
+      "trackId": "track-4",
+      "trackName": "Desktop Reboot",
+      "tableNumber": 55,
+      "laneNumber": 4,
+      "members": [
+        {
+          "name": "Vikram Malhotra",
+          "email": "vikram@example.com",
+          "github": "vik-malhotra",
+          "role": "UI/UX"
+        },
+        {
+          "name": "Priya Sundaram",
+          "email": "priya@example.com",
+          "github": "priya-s",
+          "role": "Accessibility"
+        },
+        {
+          "name": "Tanmay Bhatt",
+          "email": "tanmay@example.com",
+          "github": "tanmay-b",
+          "role": "Qt Developer"
+        }
+      ],
+      "projectTitle": "Geeko Welcome & Onboarder",
+      "projectDescription": "Frictionless setup wizard for new openSUSE users with driver detection, desktop theme preview, and one-click essential FOSS app installation.",
+      "repoUrl": "https://github.com/chameleon-craft/geeko-welcome",
+      "commitHash": "aabbccddeeff0011223344",
+      "score": 91,
+      "isFinalist": true,
+      "votes": 52
+    },
+    {
+      "id": "team-105",
+      "name": "Patch Pioneers",
+      "trackId": "track-5",
+      "trackName": "Upstream Heroes",
+      "tableNumber": 68,
+      "laneNumber": 5,
+      "members": [
+        {
+          "name": "Aditya Joshi",
+          "email": "aditya@example.com",
+          "github": "adi-joshi",
+          "role": "Maintainer"
+        },
+        {
+          "name": "Sneha Menon",
+          "email": "sneha@example.com",
+          "github": "sneha-m",
+          "role": "Translator"
+        },
+        {
+          "name": "Rahul Deshmukh",
+          "email": "rahul@example.com",
+          "github": "rahul-d",
+          "role": "QA Engineer"
+        }
+      ],
+      "projectTitle": "YaST Kannada & Hindi Localization + Regression Tests",
+      "projectDescription": "Upstream pull requests providing complete localization for YaST Network module in Kannada and Hindi, plus automated pytest fixtures.",
+      "repoUrl": "https://github.com/patch-pioneers/yast-localization-in",
+      "commitHash": "445566778899aabbccddeeff",
+      "score": 88.5,
+      "isFinalist": true,
+      "votes": 24
+    },
+    {
+      "id": "team-106",
+      "name": "OpenNova",
+      "trackId": "track-6",
+      "trackName": "What Does Linux Need Next?",
+      "tableNumber": 79,
+      "laneNumber": 6,
+      "members": [
+        {
+          "name": "Farhan Khan",
+          "email": "farhan@example.com",
+          "github": "farhan-k",
+          "role": "AI Researcher"
+        },
+        {
+          "name": "Shreya Ghoshal",
+          "email": "shreya@example.com",
+          "github": "shreya-g",
+          "role": "Full Stack"
+        },
+        {
+          "name": "Nikhil Gupta",
+          "email": "nikhil@example.com",
+          "github": "nikhil-g",
+          "role": "Systems"
+        }
+      ],
+      "projectTitle": "OfflineGeeko: P2P Package Swarm for Campus Hackathons",
+      "projectDescription": "A decentralized peer-to-peer package caching daemon that accelerates RPM package downloads over local Wi-Fi without crushing external campus bandwidth.",
+      "repoUrl": "https://github.com/opennova/offline-geeko-swarm",
+      "commitHash": "abcdef1234567890abcdef",
+      "score": 95,
+      "isFinalist": true,
+      "votes": 61
+    },
+    {
+      "id": "team-mw7gl9sw",
+      "name": "Geeko Devs",
+      "trackId": "track-3",
+      "tableNumber": 39,
+      "laneNumber": 1,
+      "members": [
+        {
+          "name": "Devika Raman",
+          "email": "devika@example.com",
+          "github": "devika-r",
+          "role": "Team Lead"
+        }
+      ],
+      "projectTitle": "Geeko Devs Innovation",
+      "projectDescription": "Project scope to be declared during First Commit Ceremony.",
+      "repoUrl": "",
+      "commitHash": "",
+      "score": 0,
+      "isFinalist": false,
+      "votes": 0
+    },
+    {
+      "id": "team-mwbp892t",
+      "name": "The Nonchalant",
+      "trackId": "track-6",
+      "tableNumber": 70,
+      "laneNumber": 3,
+      "members": [
+        {
+          "name": "Rithull Raj Kallat",
+          "email": "rithullkallat@gmail.com",
+          "github": "rithullkallat-ctrl",
+          "role": "Team Lead"
+        }
+      ],
+      "projectTitle": "The Nonchalant Innovation",
+      "projectDescription": "Project scope to be declared during First Commit Ceremony.",
+      "repoUrl": "",
+      "commitHash": "",
+      "score": 0,
+      "isFinalist": false,
+      "votes": 0
+    }
+  ],
+  "initialUsers": [
+    {
+      "id": "usr-admin-1",
+      "email": "admin@opensuse.org",
+      "passwordHash": "$2a$10$wT8Kz5Y4eD2f5VvFm7cNuOz6pGg5D5J2W0cM3r3L7P8N9O1X2Y3Z.",
+      "name": "Divyanshu Prakash",
+      "role": "admin",
+      "ticketId": "GEEKO-ADMIN-01",
+      "isOvernight": true,
+      "diet": "Vegetarian",
+      "phone": "+91 98765 43210",
+      "emergencyContact": "Emergency Desk: +91 98765 43211",
+      "checkedIn": true,
+      "checkInTime": "2027-01-16T08:45:00Z"
+    },
+    {
+      "id": "usr-judge-1",
+      "email": "judge@opensuse.org",
+      "passwordHash": "$2a$10$wT8Kz5Y4eD2f5VvFm7cNuOz6pGg5D5J2W0cM3r3L7P8N9O1X2Y3Z.",
+      "name": "Dushyant Acharya",
+      "role": "judge",
+      "ticketId": "GEEKO-JUDGE-01",
+      "isOvernight": true,
+      "diet": "Vegetarian",
+      "phone": "+91 98765 43212",
+      "emergencyContact": "Emergency Desk: +91 98765 43211",
+      "checkedIn": true,
+      "checkInTime": "2027-01-16T08:50:00Z"
+    },
+    {
+      "id": "usr-builder-1",
+      "email": "aarav@example.com",
+      "passwordHash": "$2a$10$wT8Kz5Y4eD2f5VvFm7cNuOz6pGg5D5J2W0cM3r3L7P8N9O1X2Y3Z.",
+      "name": "Aarav Sharma",
+      "role": "participant",
+      "ticketId": "GEEKO-2027-BLR-042",
+      "teamId": "team-101",
+      "teamName": "Kernel Knights",
+      "trackId": "track-1",
+      "isOvernight": true,
+      "diet": "Vegetarian",
+      "phone": "+91 98111 22233",
+      "emergencyContact": "Sunil Sharma (+91 98111 22234)",
+      "checkedIn": true,
+      "checkInTime": "2027-01-16T09:12:00Z",
+      "questXp": 700,
+      "completedMissions": [
+        "quest-1",
+        "quest-2",
+        "quest-3"
+      ],
+      "mealVouchers": {
+        "d1_welcome": {
+          "claimed": true,
+          "time": "2027-01-16T09:15:00Z"
+        },
+        "d1_lunch": {
+          "claimed": true,
+          "time": "2027-01-16T13:20:00Z"
+        },
+        "d1_tea": {
+          "claimed": true,
+          "time": "2027-01-16T17:10:00Z"
+        },
+        "d1_dinner": {
+          "claimed": false
+        },
+        "d1_late_snack": {
+          "claimed": false
+        },
+        "d2_breakfast": {
+          "claimed": false
+        }
+      }
+    },
+    {
+      "id": "usr-mw7gl9sx",
+      "name": "Devika Raman",
+      "email": "devika@example.com",
+      "github": "devika-r",
+      "phone": "+91 98888 77777",
+      "college": "Newton School of Technology",
+      "passwordHash": "$2b$10$eo.OyOpbB6kptOuuTxrR2OZXiuIiMQwVFaPc4iese9W3wYKMWqR8K",
+      "role": "participant",
+      "ticketId": "GEEKO-2027-BLR-002",
+      "teamId": "team-mw7gl9sw",
+      "teamName": "Geeko Devs",
+      "trackId": "track-3",
+      "isOvernight": true,
+      "diet": "Vegetarian",
+      "accessibility": "None",
+      "emergencyContact": "Raman (+91 98888 77776)",
+      "checkedIn": true,
+      "questXp": 0,
+      "completedMissions": [],
+      "mealVouchers": {
+        "d1_welcome": {
+          "claimed": true,
+          "time": "2026-11-08T06:36:28.154Z"
+        },
+        "d1_lunch": {
+          "claimed": false
+        },
+        "d1_tea": {
+          "claimed": false
+        },
+        "d1_dinner": {
+          "claimed": false
+        },
+        "d1_late_snack": {
+          "claimed": false
+        },
+        "d2_breakfast": {
+          "claimed": false
+        }
+      },
+      "registeredAt": "2026-11-08T06:36:14.433Z",
+      "checkInTime": "2026-11-08T06:36:21.489Z"
+    },
+    {
+      "id": "usr-mwbp892x",
+      "name": "Rithull Raj Kallat",
+      "email": "rithullkallat@gmail.com",
+      "github": "rithullkallat-ctrl",
+      "phone": "9619397633",
+      "college": "Newton School of Technology",
+      "passwordHash": "$2b$10$3yd3gXukHqx63EUxSdd36OZQRGi9xWhOGbW2zY0e09tldFHsLUB6.",
+      "role": "participant",
+      "ticketId": "GEEKO-2027-BLR-003",
+      "teamId": "team-mwbp892t",
+      "teamName": "The Nonchalant",
+      "trackId": "track-6",
+      "isOvernight": true,
+      "diet": "Vegetarian (Campus Standard)",
+      "accessibility": "None",
+      "emergencyContact": "9619397633",
+      "checkedIn": false,
+      "questXp": 0,
+      "completedMissions": [],
+      "mealVouchers": {
+        "d1_welcome": {
+          "claimed": false
+        },
+        "d1_lunch": {
+          "claimed": false
+        },
+        "d1_tea": {
+          "claimed": false
+        },
+        "d1_dinner": {
+          "claimed": false
+        },
+        "d1_late_snack": {
+          "claimed": false
+        },
+        "d2_breakfast": {
+          "claimed": false
+        }
+      },
+      "registeredAt": "2026-11-11T05:49:08.217Z"
+    }
+  ],
+  "announcements": [
+    {
+      "id": "ann-1",
+      "timestamp": "Planning Stage",
+      "title": "Proposal Adopted for Working Partner Discussions",
+      "content": "The openSUSE India – Bengaluru Connect 2027 proposal is revised and ready. Venue collaboration with Newton School of Technology confirmed in-kind.",
+      "priority": "high"
+    },
+    {
+      "id": "ann-2",
+      "timestamp": "Important Catering Notice",
+      "title": "Day 2 Lunch Notice for All Attendees",
+      "content": "Please note: Day 2 lunch is not included in the catering package. South Indian breakfast is provided for overnight builders; campus cafes will be open for lunch.",
+      "priority": "medium"
+    },
+    {
+      "id": "ann-3",
+      "timestamp": "T-Shirt Policy Reminder",
+      "title": "Reward T-Shirts vs Merchandise Preorders",
+      "content": "A pool of 25 printed reward T-shirts is reserved for Buildathon and side activity winners. Official event tees and hoodies are available for attendee preorder in our Merch store.",
+      "priority": "info"
+    }
+  ],
+  "sponsorshipInquiries": [
+    {
+      "id": "inq-1",
+      "companyName": "CloudScale Infra Labs",
+      "contactName": "Rajesh Kannan",
+      "email": "partnerships@cloudscale.io",
+      "tier": "Food & Hospitality Partner (Rs. 1,00,000)",
+      "message": "We would like to sponsor catering for the overnight builders and host a lightning demo on Linux container scaling.",
+      "date": "2026-11-05",
+      "status": "Reviewing"
+    }
+  ]
+}

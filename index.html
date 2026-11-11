@@ -1,16 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/png" href="/opensuse-logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BuildX — Find teammates. Build projects. Level up.</title>
+    <title>openSUSE India – Bengaluru Connect 2027 | Learn. Build. Contribute.</title>
+    <meta name="description" content="Two days of open source learning, collaboration, and building at Newton School of Technology, Bengaluru. Featuring the 20 hour Geeko Buildathon, labs, and community sessions." />
+    <meta name="keywords" content="openSUSE, openSUSE India, Bengaluru Connect 2027, Linux, Hackathon, Geeko Buildathon, Newton School of Technology, Open Source" />
+    <meta name="theme-color" content="#060b09" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="openSUSE India – Bengaluru Connect 2027" />
+    <meta property="og:description" content="Learn. Build. Contribute. The flagship open source gathering and 20 hour Buildathon in Bengaluru." />
+    <meta property="og:image" content="/og-banner.png" />
+
+    <!-- Google Fonts Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Press+Start+2P&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <style>
+      /* Prevent any white flash */
+      html, body, #root {
+        background-color: #040807;
+        color: #f0fdf4;
+        min-height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
   </head>
-  <body>
+  <body class="bg-cyber-black text-geeko-50 selection:bg-geeko-500 selection:text-black">
     <div id="root"></div>
+
+    <!-- Single Page Apps for GitHub Pages redirect receiver -->
+    <script type="text/javascript">
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
+
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

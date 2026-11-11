@@ -1,0 +1,174 @@
+// Prisma Schema for openSUSE India – Bengaluru Connect 2027
+// Target: PostgreSQL (Production) or SQLite (Local / Staging)
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum Role {
+  PARTICIPANT
+  JUDGE
+  ORGANIZER
+  ADMIN
+  VOLUNTEER
+}
+
+enum MissionStatus {
+  PENDING
+  VERIFIED
+  REJECTED
+}
+
+enum Priority {
+  LOW
+  MEDIUM
+  HIGH
+  URGENT
+}
+
+model User {
+  id                String            @id @default(cuid())
+  email             String            @unique
+  passwordHash      String
+  name              String
+  role              Role              @default(PARTICIPANT)
+  ticketId          String            @unique
+  github            String?
+  phone             String?
+  college           String?           @default("Newton School of Technology")
+  isOvernight       Boolean           @default(false)
+  is18Plus          Boolean           @default(false)
+  diet              String            @default("Vegetarian")
+  accessibility     String?
+  emergencyContact  String?
+  checkedIn         Boolean           @default(false)
+  checkInTime       DateTime?
+  questXp           Int               @default(0)
+  createdAt         DateTime          @default(now())
+  updatedAt         DateTime          @updatedAt
+
+  // Relationships
+  teamId            String?
+  team              Team?             @relation(fields: [teamId], references: [id])
+  missionClaims     MissionClaim[]
+  bugHuntSubmissions BugHuntSubmission[]
+  peoplesChoiceVote PeoplesChoiceVote?
+  mealVouchers      MealVoucher[]
+
+  @@index([email])
+  @@index([ticketId])
+}
+
+model Team {
+  id                   String        @id @default(cuid())
+  name                 String        @unique
+  trackId              String
+  tableNumber          Int?
+  laneNumber           Int?
+  projectTitle         String?
+  projectDescription   String?
+  repoUrl              String?
+  commitHash           String?
+  aiAssistanceDeclared Boolean       @default(false)
+  submissionTime       DateTime?
+  score                Float         @default(0.0)
+  isFinalist           Boolean       @default(false)
+  finalistRank         Int?
+  createdAt            DateTime      @default(now())
+  updatedAt            DateTime      @updatedAt
+
+  // Relationships
+  members              User[]
+  judgingScores        JudgingScore[]
+  peoplesChoiceVotes   PeoplesChoiceVote[]
+
+  @@index([trackId])
+}
+
+model MissionClaim {
+  id             String        @id @default(cuid())
+  userId         String
+  missionId      String
+  status         MissionStatus @default(VERIFIED)
+  xpAwarded      Int
+  verifiedBy     String?
+  claimedAt      DateTime      @default(now())
+
+  user           User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, missionId])
+}
+
+model BugHuntSubmission {
+  id            String    @id @default(cuid())
+  userId        String
+  challengeType String    // "rookie" or "expert"
+  code          String
+  passed        Boolean   @default(false)
+  submittedAt   DateTime  @default(now())
+
+  user          User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model PeoplesChoiceVote {
+  id          String    @id @default(cuid())
+  userId      String    @unique
+  teamId      String
+  votedAt     DateTime  @default(now())
+
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  team        Team      @relation(fields: [teamId], references: [id], onDelete: Cascade)
+}
+
+model MealVoucher {
+  id          String    @id @default(cuid())
+  userId      String
+  mealType    String    // d1_welcome, d1_lunch, d1_tea, d1_dinner, d1_late_snack, d2_breakfast
+  claimed     Boolean   @default(false)
+  claimedAt   DateTime?
+
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, mealType])
+}
+
+model JudgingScore {
+  id             String    @id @default(cuid())
+  teamId         String
+  judgeId        String
+  laneNumber     Int
+  usefulness     Float     // Weight: 25%
+  execution      Float     // Weight: 25%
+  linuxRelevance Float     // Weight: 20%
+  creativity     Float     // Weight: 15%
+  documentation  Float     // Weight: 15%
+  totalScore     Float
+  notes          String?
+  createdAt      DateTime  @default(now())
+
+  team           Team      @relation(fields: [teamId], references: [id], onDelete: Cascade)
+}
+
+model SponsorshipInquiry {
+  id          String    @id @default(cuid())
+  companyName String
+  contactName String
+  email       String
+  tier        String?
+  message     String
+  status      String    @default("Received")
+  createdAt   DateTime  @default(now())
+}
+
+model Announcement {
+  id        String   @id @default(cuid())
+  title     String
+  content   String
+  priority  Priority @default(MEDIUM)
+  createdAt DateTime @default(now())
+}

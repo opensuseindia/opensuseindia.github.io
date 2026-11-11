@@ -153,7 +153,7 @@ export default function SignupPage() {
             ))}
           </div>
 
-          {/* Step content — NOT wrapped in a single form */}
+          {/* Step content   NOT wrapped in a single form */}
           <div className="space-y-5">
             <AnimatePresence mode="wait">
               {step === 1 && (

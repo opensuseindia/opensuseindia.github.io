@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 90" width="340" height="90">
+  <rect width="100%" height="100%" fill="none" />
+  <!-- NVIDIA Eye Icon -->
+  <g transform="translate(10, 15)">
+    <path d="M 0 30 C 0 10, 20 0, 40 0 C 60 0, 75 18, 75 30 C 75 42, 60 60, 40 60 C 20 60, 0 50, 0 30 Z" fill="#76b900" />
+    <path d="M 12 30 C 12 18, 26 10, 40 10 C 54 10, 63 22, 63 30 C 63 38, 54 50, 40 50 C 26 50, 12 42, 12 30 Z" fill="#ffffff" />
+    <path d="M 24 30 C 24 23, 32 18, 40 18 C 48 18, 52 25, 52 30 C 52 35, 48 42, 40 42 C 32 42, 24 37, 24 30 Z" fill="#76b900" />
+  </g>
+  <!-- NVIDIA Wordmark -->
+  <text x="100" y="52" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="34" fill="#000000" letter-spacing="1">
+    NVIDIA
+  </text>
+</svg>
