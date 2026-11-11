@@ -129,6 +129,7 @@ export default function Hero3DCanvas() {
     <div className="absolute inset-0 pointer-events-none opacity-80 z-0 overflow-hidden">
       <Canvas
         camera={{ position: [0, 0, 6.5], fov: 50 }}
+        dpr={[1, 1.5]}
         gl={{ antialias: true, alpha: true, powerPreference: 'high-performance' }}
       >
         <ambientLight intensity={0.4} />
