@@ -12,7 +12,7 @@ export default function Footer() {
   return (
     <footer
       id="site-footer"
-      className="border-t-2 border-black bg-[#030806] relative overflow-hidden font-mono text-xs text-slate-400 select-none"
+      className="border-t-2 border-black bg-[#030806] relative overflow-hidden font-mono text-xs text-slate-400 select-none home-snap-footer"
     >
       {/* Background ambient phosphor glow */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-32 bg-geeko-500/10 blur-[100px] pointer-events-none" />

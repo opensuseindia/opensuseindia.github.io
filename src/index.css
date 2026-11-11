@@ -20,6 +20,30 @@
     -webkit-overflow-scrolling: touch;
   }
 
+  /* Hardware-Accelerated 240 FPS Butter-Smooth Snap */
+  html.home-snap-active {
+    scroll-snap-type: y mandatory;
+    scroll-padding-top: 64px;
+    scroll-behavior: smooth;
+  }
+
+  @media (max-width: 768px) {
+    html.home-snap-active {
+      scroll-snap-type: y proximity;
+    }
+  }
+
+  .home-snap-section {
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
+    scroll-margin-top: 64px;
+  }
+
+  .home-snap-footer {
+    scroll-snap-align: end;
+    scroll-snap-stop: normal;
+  }
+
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading tracking-tight text-white;
   }

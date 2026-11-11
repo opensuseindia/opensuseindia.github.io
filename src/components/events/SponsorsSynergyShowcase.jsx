@@ -106,7 +106,7 @@ export default function SponsorsSynergyShowcase() {
   return (
     <section
       id="sponsors"
-      className="relative min-h-[calc(100vh-64px)] flex flex-col justify-center py-6 sm:py-8 px-4 sm:px-6 max-w-7xl mx-auto select-none border-b border-[#173f35]/50 overflow-hidden"
+      className="relative min-h-[calc(100vh-64px)] flex flex-col justify-center py-6 sm:py-8 px-4 sm:px-6 max-w-7xl mx-auto select-none border-b border-[#173f35]/50 overflow-hidden home-snap-section"
     >
       {/* Background Ambient Glow */}
       <div

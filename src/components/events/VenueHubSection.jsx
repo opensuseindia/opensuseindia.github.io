@@ -55,7 +55,7 @@ export default function VenueHubSection() {
   return (
     <section
       id="venue"
-      className="relative pt-6 sm:pt-8 pb-10 sm:pb-12 px-4 sm:px-6 max-w-7xl mx-auto border-b border-[#173f35]/50 overflow-hidden"
+      className="relative pt-6 sm:pt-8 pb-10 sm:pb-12 px-4 sm:px-6 max-w-7xl mx-auto border-b border-[#173f35]/50 overflow-hidden home-snap-section"
     >
       <span id="venue-anchor" className="absolute -top-24 pointer-events-none" />
 

@@ -94,7 +94,7 @@ export default function ScheduleReadableSection() {
   return (
     <section
       id="schedule"
-      className="relative min-h-[calc(100vh-64px)] flex flex-col justify-center py-6 sm:py-8 px-4 sm:px-6 max-w-7xl mx-auto border-b border-[#173f35]/50 overflow-hidden select-none"
+      className="relative min-h-[calc(100vh-64px)] flex flex-col justify-center py-6 sm:py-8 px-4 sm:px-6 max-w-7xl mx-auto border-b border-[#173f35]/50 overflow-hidden select-none home-snap-section"
     >
       {/* Dynamic Cyber Ambient Glows */}
       <div className="absolute top-1/3 left-1/4 -translate-y-1/2 w-[450px] h-[400px] bg-[#73ba25]/[0.02] blur-[150px] pointer-events-none rounded-full" />

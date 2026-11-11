@@ -44,8 +44,31 @@ export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('ALL');
   const [searchQuery, setSearchQuery] = useState('');
+  const [activeSectionId, setActiveSectionId] = useState('hero');
 
   useEffect(() => {
+    document.documentElement.classList.add('home-snap-active');
+
+    const sectionIds = ['hero', 'all-events', 'highlights', 'venue', 'schedule', 'sponsors'];
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSectionId(entry.target.id);
+          }
+        });
+      },
+      {
+        rootMargin: '-20% 0px -40% 0px',
+        threshold: 0.1,
+      }
+    );
+
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
     const scrollToEvents = () => {
       const stage = document.getElementById('events-stage') || document.getElementById('all-events');
       if (stage) {
@@ -80,6 +103,8 @@ export default function Home() {
     }
 
     return () => {
+      document.documentElement.classList.remove('home-snap-active');
+      observer.disconnect();
       window.removeEventListener('open-all-events', handleScrollToEvents);
     };
   }, [location.hash, location.state]);
@@ -145,7 +170,7 @@ export default function Home() {
       {/* ========================================================================= */}
       <section
         id="all-events"
-        className="relative w-full bg-[#020504] overflow-hidden select-none"
+        className="relative w-full bg-[#020504] overflow-hidden select-none home-snap-section"
       >
         <span id="stream" className="absolute -top-24 pointer-events-none" />
 
@@ -345,7 +370,7 @@ export default function Home() {
       {/* ========================================================================= */}
       <section
         id="highlights"
-        className="relative min-h-[calc(100vh-64px)] flex flex-col justify-between pt-10 sm:pt-12 pb-6 sm:pb-8 px-4 sm:px-6 max-w-7xl mx-auto border-b border-[#173f35]/50 overflow-hidden select-none"
+        className="relative min-h-[calc(100vh-64px)] flex flex-col justify-between pt-10 sm:pt-12 pb-6 sm:pb-8 px-4 sm:px-6 max-w-7xl mx-auto border-b border-[#173f35]/50 overflow-hidden select-none home-snap-section"
       >
         <span id="overview" className="absolute -top-24 pointer-events-none" />
 
@@ -676,6 +701,54 @@ export default function Home() {
       {/* 5. SYNERGY-STYLE FEATURED SPONSORS & HOSTS SHOWCASE                      */}
       {/* ========================================================================= */}
       <SponsorsSynergyShowcase />
+
+      {/* ========================================================================= */}
+      {/* FLOATING CYBER SECTION NAVIGATION DOCK (DESKTOP ONLY)                     */}
+      {/* ========================================================================= */}
+      <aside
+        aria-label="Section Navigation"
+        className="fixed right-4 top-1/2 -translate-y-1/2 z-40 hidden lg:flex flex-col items-center gap-2.5 p-2 rounded-full bg-black/70 backdrop-blur-md border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.85)]"
+      >
+        {[
+          { id: 'hero', label: 'HERO' },
+          { id: 'all-events', label: 'EVENTS' },
+          { id: 'highlights', label: 'PERKS' },
+          { id: 'venue', label: 'VENUE' },
+          { id: 'schedule', label: 'SCHEDULE' },
+          { id: 'sponsors', label: 'SPONSORS' },
+        ].map((sec) => {
+          const isActive = activeSectionId === sec.id;
+          return (
+            <button
+              key={sec.id}
+              type="button"
+              onClick={() => {
+                sounds.click();
+                const el = document.getElementById(sec.id);
+                if (el) {
+                  const navbarHeight = 64;
+                  const rect = el.getBoundingClientRect();
+                  const targetY = rect.top + window.scrollY - navbarHeight;
+                  window.scrollTo({ top: Math.max(0, targetY), behavior: 'smooth' });
+                }
+              }}
+              title={sec.label}
+              className="group relative flex items-center justify-center w-6 h-6 rounded-full transition-all cursor-pointer"
+            >
+              <span className="absolute right-8 px-2 py-0.5 rounded bg-black/90 border border-white/20 text-[#73ba25] font-mono text-[9px] uppercase tracking-wider whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-lg">
+                {sec.label}
+              </span>
+              <span
+                className={`transition-all duration-300 rounded-full ${
+                  isActive
+                    ? 'w-2.5 h-6 bg-[#73ba25] shadow-[0_0_12px_#73ba25]'
+                    : 'w-2 h-2 bg-white/25 group-hover:bg-white/60 group-hover:scale-125'
+                }`}
+              />
+            </button>
+          );
+        })}
+      </aside>
 
       {/* ========================================================================= */}
       {/* EVENT DETAILS POPUP MODAL (TRIGGERED FROM 3D STREAM / CARDS)              */}

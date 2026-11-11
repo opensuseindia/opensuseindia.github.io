@@ -103,7 +103,7 @@ export default function SynergyHero() {
       ref={heroRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="relative w-full min-h-[94vh] pt-28 sm:pt-32 lg:pt-36 pb-8 bg-[#020504] overflow-hidden flex flex-col justify-between items-center select-none text-white px-4"
+      className="relative w-full min-h-[94vh] pt-28 sm:pt-32 lg:pt-36 pb-8 bg-[#020504] overflow-hidden flex flex-col justify-between items-center select-none text-white px-4 home-snap-section"
     >
       {/* ===================================================================== */}
       {/* 1. ULTRA-SMOOTH CYBER MATRIX & HORIZON BACKGROUND (Zero WebGL Lag)    */}
