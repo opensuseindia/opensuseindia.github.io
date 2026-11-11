@@ -91,8 +91,14 @@ export default function Home() {
     };
 
     const onScroll = () => {
-      // Disable JS section glide on coarse touch screens so mobile touch momentum stays 100% buttery
-      if (window.matchMedia('(pointer: coarse)').matches) return;
+      // Completely disable desktop section-jumping on smartphones & tablets (< 1024px or touch)
+      if (
+        window.innerWidth < 1024 ||
+        window.matchMedia('(pointer: coarse)').matches ||
+        window.matchMedia('(hover: none)').matches
+      ) {
+        return;
+      }
       // Don't auto-scroll if user is hovering or interacting with the map
       if (window.__isMapHovered) return;
       if (isAutoScrolling) return;
@@ -494,7 +500,7 @@ export default function Home() {
               <span className="w-1.5 h-1.5 rounded-full bg-[#8ee631] animate-pulse" />
             </div>
             <h2
-              className="text-3xl sm:text-4xl md:text-5xl font-pixel uppercase tracking-tight [word-spacing:-0.45em] text-white select-none mb-2.5"
+              className="text-xl sm:text-4xl md:text-5xl font-pixel uppercase tracking-tight [word-spacing:-0.45em] text-white select-none mb-2.5"
               style={{
                 textShadow: "2px 2px 0 #0d3824, 4px 4px 0 #051910",
               }}

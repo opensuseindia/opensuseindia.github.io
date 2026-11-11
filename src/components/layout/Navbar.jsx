@@ -112,11 +112,11 @@ export default function Navbar({ toggleCrt, isCrtActive }) {
             />
 
             {/* openSUSE (White -> Green #73ba25) & INDIA (Green #73ba25 -> White) */}
-            <div className="flex items-center gap-1.5 sm:gap-2 select-none">
-              <span className="font-heading font-extrabold text-white text-[18px] sm:text-[19px] tracking-tight group-hover:text-[#73ba25] transition-colors duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
+            <div className="flex items-center gap-1 sm:gap-2 select-none">
+              <span className="font-heading font-extrabold text-white text-[15px] sm:text-[19px] tracking-tight group-hover:text-[#73ba25] transition-colors duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
                 openSUSE
               </span>
-              <span className="font-heading font-extrabold text-[#73ba25] text-[18px] sm:text-[19px] tracking-tight group-hover:text-white transition-colors duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
+              <span className="font-heading font-extrabold text-[#73ba25] text-[15px] sm:text-[19px] tracking-tight group-hover:text-white transition-colors duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
                 INDIA
               </span>
             </div>
@@ -440,15 +440,15 @@ export default function Navbar({ toggleCrt, isCrtActive }) {
         {/* ========================================================= */}
         {/* 3. RIGHT TOOLS: CRT, SIGN IN / USER, REGISTER             */}
         {/* ========================================================= */}
-        <div className="flex items-center gap-2 sm:gap-2.5 shrink-0 z-10">
-          {/* Retro CRT Toggle */}
+        <div className="flex items-center gap-1.5 sm:gap-2.5 shrink-0 z-10">
+          {/* Retro CRT Toggle (Hidden on extra-small mobile to preserve navbar space) */}
           <button
             onClick={() => {
               sounds.click();
               toggleCrt();
             }}
             title={isCrtActive ? 'Disable CRT Scanlines' : 'Enable CRT Scanlines'}
-            className={`w-8 h-8 rounded-lg border transition-colors flex items-center justify-center ${
+            className={`hidden sm:flex w-8 h-8 rounded-lg border transition-colors items-center justify-center ${
               isCrtActive
                 ? 'bg-geeko-500/20 border-geeko-500 text-geeko-400 shadow-[0_0_10px_rgba(115,186,37,0.3)]'
                 : 'bg-[#081510] hover:bg-[#0e241b] border-cyber-border text-slate-400 hover:text-white'
@@ -482,10 +482,10 @@ export default function Navbar({ toggleCrt, isCrtActive }) {
           <Link
             to="/register"
             onClick={() => sounds.click()}
-            className="px-3 sm:px-3.5 py-1.5 rounded-lg bg-[#73ba25] hover:bg-[#85d82c] border border-[#a3e635] text-[#040807] font-pixel text-[9px] sm:text-[9.5px] font-bold tracking-wider shadow-[0_2px_0_#2b5714,0_0_15px_rgba(115,186,37,0.35)] hover:shadow-[0_3px_0_#2b5714,0_0_22px_rgba(115,186,37,0.55)] active:translate-y-0.5 active:shadow-[0_1px_0_#2b5714] transition-all flex items-center gap-1.5 shrink-0"
+            className="px-2.5 sm:px-3.5 py-1.5 rounded-lg bg-[#73ba25] hover:bg-[#85d82c] border border-[#a3e635] text-[#040807] font-pixel text-[8.5px] sm:text-[9.5px] font-bold tracking-wider shadow-[0_2px_0_#2b5714,0_0_15px_rgba(115,186,37,0.35)] hover:shadow-[0_3px_0_#2b5714,0_0_22px_rgba(115,186,37,0.55)] active:translate-y-0.5 active:shadow-[0_1px_0_#2b5714] transition-all flex items-center gap-1.5 shrink-0"
           >
             <span>REGISTER</span>
-            <span className="px-1.5 py-0.5 rounded bg-[#040807]/20 text-[#040807] font-mono text-[9px] font-bold">
+            <span className="hidden sm:inline-block px-1.5 py-0.5 rounded bg-[#040807]/20 text-[#040807] font-mono text-[9px] font-bold">
               250 CAP
             </span>
           </Link>

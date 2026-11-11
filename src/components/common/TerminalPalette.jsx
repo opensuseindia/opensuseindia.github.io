@@ -316,7 +316,7 @@ Package 'geeko-buildathon-passion' is already at latest version (2027.01-1).`,
           setIsOpen((prev) => !prev);
         }}
         onMouseEnter={() => sounds.hover?.()}
-        className="fixed bottom-6 left-6 z-40 group p-[1px] rounded-full transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] cursor-pointer select-none bg-[#173f35]/60 hover:bg-gradient-to-b hover:from-[#73ba25] hover:via-[#529419] hover:to-[#275910] shadow-[0_2px_8px_rgba(0,0,0,0.5)] hover:shadow-[0_2px_0_#1b4d24,0_2px_8px_rgba(0,0,0,0.6)] hover:-translate-y-0.5 active:translate-y-0.5 opacity-85 hover:opacity-100"
+        className="hidden md:block fixed bottom-6 left-6 z-40 group p-[1px] rounded-full transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] cursor-pointer select-none bg-[#173f35]/60 hover:bg-gradient-to-b hover:from-[#73ba25] hover:via-[#529419] hover:to-[#275910] shadow-[0_2px_8px_rgba(0,0,0,0.5)] hover:shadow-[0_2px_0_#1b4d24,0_2px_8px_rgba(0,0,0,0.6)] hover:-translate-y-0.5 active:translate-y-0.5 opacity-85 hover:opacity-100"
         title="Open Geeko Linux CLI (⌘K)"
       >
         <div className="px-3.5 py-1.5 rounded-full flex items-center gap-2 bg-[rgba(4,10,7,0.72)] backdrop-blur-md group-hover:bg-gradient-to-b group-hover:from-[#0e2916] group-hover:via-[#081a0e] group-hover:to-[#040c06] transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]">

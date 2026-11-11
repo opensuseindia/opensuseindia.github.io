@@ -172,7 +172,7 @@ export default function SynergyHero() {
       <div className="relative z-10 flex flex-col items-center text-center my-auto w-full max-w-4xl px-2">
         {/* 3D Tiltable Marquee Container */}
         <div
-          className="relative inline-flex flex-col items-center justify-center cursor-pointer transition-transform duration-150 p-4 sm:p-6"
+          className="relative inline-flex flex-col items-center justify-center cursor-pointer transition-transform duration-150 py-3 px-1 sm:p-6"
           style={{
             transform: `perspective(800px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`,
           }}
@@ -181,7 +181,7 @@ export default function SynergyHero() {
           {/* Primary Logo Title */}
           <div className="flex items-center justify-center gap-1.5 sm:gap-3">
             <span
-              className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-pixel font-bold text-white tracking-normal select-none"
+              className="text-[22px] sm:text-5xl md:text-6xl lg:text-7xl font-pixel font-bold text-white tracking-normal select-none"
               style={{
                 textShadow:
                   '3px 3px 0 #0d3824, 6px 6px 0 #051910, 8px 8px 0 #020d08, 0 10px 30px rgba(0,0,0,0.85), 0 0 35px rgba(115,186,37,0.45)',
@@ -190,7 +190,7 @@ export default function SynergyHero() {
               openSUSE
             </span>
             <span
-              className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-pixel font-bold text-[#73ba25] tracking-normal select-none"
+              className="text-[22px] sm:text-5xl md:text-6xl lg:text-7xl font-pixel font-bold text-[#73ba25] tracking-normal select-none"
               style={{
                 textShadow:
                   '3px 3px 0 #2b5714, 6px 6px 0 #051910, 8px 8px 0 #020d08, 0 10px 30px rgba(0,0,0,0.85), 0 0 35px rgba(0,240,255,0.5)',
@@ -201,12 +201,12 @@ export default function SynergyHero() {
           </div>
 
           {/* Subtitle Ribbon */}
-          <div className="font-pixel text-[11px] sm:text-sm md:text-base tracking-[0.2em] sm:tracking-[0.28em] text-[#00f0ff] uppercase mt-2.5 drop-shadow-[0_0_12px_rgba(0,240,255,0.6)]">
+          <div className="font-pixel text-[10px] sm:text-sm md:text-base tracking-[0.18em] sm:tracking-[0.28em] text-[#00f0ff] uppercase mt-2.5 drop-shadow-[0_0_12px_rgba(0,240,255,0.6)]">
             BENGALURU CONNECT
           </div>
 
           {/* Minecraft Splash Bouncing Tag */}
-          <div className="absolute bottom-5 sm:bottom-6 md:bottom-7 -right-3 sm:-right-8 md:-right-16 z-20 pointer-events-none">
+          <div className="mt-3 sm:mt-0 sm:absolute sm:bottom-6 md:bottom-7 sm:-right-8 md:-right-16 z-20 pointer-events-none">
             <div className="mc-splash text-[6.5px] sm:text-[7.5px] md:text-[8px]">
               {splashes[splashIdx]}
             </div>
@@ -214,10 +214,11 @@ export default function SynergyHero() {
         </div>
 
         {/* Tagline Paragraph (Clean, balanced 2 lines with zero orphans) */}
-        <p className="text-slate-100 text-xs sm:text-[13.5px] md:text-[14px] max-w-3xl mx-auto mt-6 sm:mt-7 font-sans leading-relaxed text-center drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+        <p className="text-slate-100 text-xs sm:text-[13.5px] md:text-[14px] max-w-3xl mx-auto mt-4 sm:mt-7 font-sans leading-relaxed text-center px-2 drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
           <span className="sm:block font-medium">
             The flagship gathering of Linux builders, open source engineers, and student hackers in India.
           </span>
+          {' '}
           <span className="sm:block text-slate-300">
             20 hours of overnight building, ₹50,000 in grand cash prizes, and zero registration fees.
           </span>

@@ -122,7 +122,7 @@ export default function SponsorsSynergyShowcase() {
             <span>// INDUSTRY ALLIANCES &amp; HOSTS //</span>
           </div>
           <h2
-            className="text-2xl sm:text-3xl md:text-4xl font-pixel uppercase tracking-wider text-white select-none"
+            className="text-xl sm:text-3xl md:text-4xl font-pixel uppercase tracking-wider text-white select-none"
             style={{
               textShadow: '3px 3px 0 #12301c, 6px 6px 0 #071712, 0 0 30px rgba(115,186,37,0.4)',
             }}
@@ -180,7 +180,7 @@ export default function SponsorsSynergyShowcase() {
                   transition={{ duration: 0.3 }}
                 >
                   <h3
-                    className="font-pixel text-4xl sm:text-5xl lg:text-6xl text-white tracking-wider mb-3 leading-none select-none"
+                    className="font-pixel text-2xl sm:text-5xl lg:text-6xl text-white tracking-wider mb-3 leading-none select-none"
                     style={{
                       textShadow: `2px 2px 0 rgba(0,0,0,0.8), 0 0 35px ${current.color}40`,
                     }}

@@ -71,7 +71,7 @@ export default function VenueHubSection() {
           <span className="w-1.5 h-1.5 rounded-full bg-[#8ee631] animate-pulse" />
         </div>
         <h2
-          className="text-2xl sm:text-3xl md:text-4xl font-pixel uppercase tracking-tight [word-spacing:-0.45em] text-white select-none mb-2"
+          className="text-xl sm:text-3xl md:text-4xl font-pixel uppercase tracking-tight [word-spacing:-0.45em] text-white select-none mb-2"
           style={{
             textShadow: '2px 2px 0 #0d3824, 4px 4px 0 #051910',
           }}
