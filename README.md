@@ -33,20 +33,6 @@ This platform is engineered as a **production-ready full-stack digital experienc
 
 ---
 
-## 🎨 Creative Inspiration & Reference Website Analysis
-
-### Primary Reference Analysis: `https://synergy.iiitb.ac.in/`
-- **Analyzed Status**: Live site verified (HTTP/2 200, Cloudflare edge, React 18, Tailwind CSS, Framer Motion, Three.js 3D hero canvas, Press Start 2P font accents, dynamic floating navbar, interactive event drawer, custom glowing cursor, SPOC/admin QR scanners).
-- **Elevated openSUSE Interpretation**:
-  - Rather than cloning Synergy, we developed an **original openSUSE identity** rooted in Linux craftsmanship and the openSUSE brand.
-  - **Palette**: openSUSE Chameleon Green (`#73ba25`), Deep Charcoal & Pitch Forest (`#040807`, `#080e0c`, `#0c1613`), Pine Slate (`#173f35`), Cyber Mint (`#4ade80`), and Clean White (`#f0fdf4`).
-  - **Interactive 3D Hero Canvas**: Built with `@react-three/fiber` & Three.js featuring an openSUSE wireframe core, orbital gyroscopes, and responsive particle constellations.
-  - **Web Audio API Sound Engine**: Zero-asset procedural synthesizer producing soft micro-ticks on button hover, confirmation chimes, retro 8-bit fanfares on arcade achievements, and a master mute toggle.
-  - **Interactive Command Palette (`⌘K` / `Ctrl+K`)**: Authentic Linux CLI simulator supporting `help`, `tracks`, `schedule`, `arcade`, `bughunt`, `prizes`, `zypper`, `sudo`, and quick navigation.
-  - **CRT Scanline Mode**: Authentic retro phosphor terminal scanline overlay toggleable at the top bar.
-  - **Custom Glowing Cursor**: Interactive spring-physics trailing cursor with magnet states for buttons and clickable links.
-
----
 
 ## 🗺️ Complete Page Architecture
 
