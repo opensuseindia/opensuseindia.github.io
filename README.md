@@ -1,4 +1,4 @@
-# openSUSE India – Bengaluru Connect 2027
+# openSUSE India Bengaluru Connect 2027
 ### *Learn. Build. Contribute.*
 
 > **Flagship Full-Stack Digital Event Platform** for the two-day open-source gathering and 20-hour Geeko Buildathon at Newton School of Technology, Bengaluru (January 2027).
